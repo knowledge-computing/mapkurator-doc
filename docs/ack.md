@@ -22,11 +22,11 @@ Special thanks to [TESTR](https://github.com/mlpc-ucsd/TESTR) for an open-source
   <tbody>
    <tr>
     <td align="center">
-      <a href="https://www.turing.ac.uk/"><img width="300"
+      <a href="https://www.turing.ac.uk/"><img width="250"
       src="https://www.hdruk.ac.uk/wp-content/uploads/2022/05/Turing-logo-black-scaled-e1673865969893-300x158.jpg"></a> 
     </td>
     <td align="center">
-      <a href="https://www.loc.gov/"><img width="300"
+      <a href="https://www.loc.gov/"><img width="250"
       src="https://www.loc.gov/static/images/logo-loc-new-branding.svg"></a> 
     </td>
     
