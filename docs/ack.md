@@ -6,11 +6,16 @@ Special thanks to [TESTR](https://github.com/mlpc-ucsd/TESTR) for an open-source
 
 <table>
   <tbody>
-   <tr>
+  	<tr>
+    <td align="center">
+      <a href="https://www.neh.gov/"><img height="120"
+      src="https://www.neh.gov/sites/default/files/styles/medium/public/2019-08/NEH-Preferred-Seal820.jpg?itok=VyHHX8pd"></a> 
+    </td>
     <td align="center">
       <a href="https://www.davidrumsey.com/"><img height="80"
       src="_media/rumsey_collection.png"></a> 
     </td>
+    
 </tr>
 <tbody>
 </table>
