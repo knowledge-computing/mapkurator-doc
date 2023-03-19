@@ -7,6 +7,20 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <style> /*customized font size*/
+    html {
+      font-size: 18px;
+    }
+
+    body,
+    .app-nav li ul li,
+    .sidebar ul li a,
+    input[type='search'] {
+      font-size: 1em;
+    }
+  </style>
+
 </head>
 <body>
   <div id="app"></div>
@@ -15,13 +29,14 @@
       name: 'mapKurator',
       repo: 'knowledge-computing/mapkurator-system',
       maxLevel: 3,
+      subMaxLevel: 3,
       coverpage: true,
-      loadSidebar: true,
       auto2top: true,
       autoHeader: true,
       nativeEmoji: true,
       homepage: '/docs/introduction.md',
       logo: '/_media/mapkurator-text.png height="100px"',
+      loadSidebar: true,
       search: 'auto', // default
 
     search: [
@@ -33,7 +48,7 @@
     // complete configuration parameters
     search: {
       maxAge: 86400000, // Expiration time, the default one day
-      paths: [], // or 'auto'
+      paths: 'auto', // or 'auto'
       placeholder: 'Type to search',
 
       // Localization
@@ -51,7 +66,7 @@
       },
 
       // Headline depth, 1 - 6
-      depth: 2,
+      depth: 6,
 
       hideOtherSidebarContent: false, // whether or not to hide other sidebar content
 
@@ -74,8 +89,10 @@
   }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <script src="//unpkg.com/docsify/lib/docsify.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <script src="//pyecharts.org/static/zoom-image.js"></script>
   <script src="//pyecharts.org/static/prism-python.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
