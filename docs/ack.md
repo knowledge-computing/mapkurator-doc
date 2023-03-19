@@ -31,6 +31,10 @@ Special thanks to [TESTR](https://github.com/mlpc-ucsd/TESTR) for an open-source
       src="https://www.hdruk.ac.uk/wp-content/uploads/2022/05/Turing-logo-black-scaled-e1673865969893-300x158.jpg"></a> 
     </td>
     <td align="center">
+      <a href="https://libraries.usc.edu/"><img width="250"
+      src="https://libraries.usc.edu/sites/default/files/styles/16_9_xlarge/public/2023-01/F2L_LB_Card-Blk_RGB.jpg?itok=k9g7Oz4W"></a> 
+    </td>
+    <td align="center">
       <a href="https://www.loc.gov/"><img width="250"
       src="https://www.loc.gov/static/images/logo-loc-new-branding.svg"></a> 
     </td>
