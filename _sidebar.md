@@ -14,7 +14,6 @@
   - [How to Use](docs/how-to-use-2.md)
 
 - Data
-  - [Rumsey Map Collection](docs/rumsey.md)
   - [Ordnance Survey Maps](docs/os.md)
   - [Sanborn Maps](docs/sanborn.md)
 
