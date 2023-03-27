@@ -30,3 +30,14 @@ optional arguments:
 
 @zekun @yijun @jina @min @leeje 
 Provide sample commands to run each module
+
+Example for running the spotting module
+```
+python run.py --module_text_spotting 
+              --text_spotting_model_dir ./spotter-v2/PALEJUN/
+              --sample_map_csv_path ./sample_maps.csv
+              --expt_name sample_maps 
+              --spotter_model spotter-v2
+              --spotter_config ./spotter-v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
+              --spotter_expt_name test
+```
