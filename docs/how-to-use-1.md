@@ -27,3 +27,6 @@ optional arguments:
                         Name of spotter experiment, if empty using config file name
   --print_command
   ```
+
+@zekun @yijun @jina @min @leeje 
+Provide sample commands to run each module

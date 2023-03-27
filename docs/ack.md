@@ -1,7 +1,5 @@
 
 
-Special thanks to [TESTR](https://github.com/mlpc-ucsd/TESTR) for an open-source text spotting model. 
-
 ### Sponsor
 
 <table>
