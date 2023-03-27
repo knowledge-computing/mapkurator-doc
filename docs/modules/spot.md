@@ -1,19 +1,18 @@
 
 @yijun 
 
-Code:
+The mapKurator system provides two state-of-the-art approaches for spotting text instances on scaned historical maps. Both approaches, <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a> and Spotter-v2, are built upon <a href="https://github.com/fundamentalvision/Deformable-DETR" target="_blank">Deformable-DETR</a>.
 
-The Spotter V2 is built upon the Deformable DETR 
+- Training Datasets
+  - Synthetic datasets: TBD 
+  - Human Annotations: TBD
 
+- Text Spotters
+  - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>
+  - Spotter-v2: The appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection and recognition performance. Code: TBD
 
-Spotter V2 (Knowledge Computing Github) (one paragraph to describe the difference from TESTR)
+- Training Process
+  - Pretrain: We train the models with the synthetic datasets.
+  - Finetune: We finetune the models with human annotations.
+  
 
-mapKurator pipeline with TESTR and Spotter V2* (Knowledge Computing Github)
-
-
-Model:
-	- Spotter V2 trained for the second data delivery (Zekun will figure out where to publish them) - training data & process
-	- Spotter V2* (synthetic + realworld) trained for the third data delivery (Zekun will figure out where to publish them)
-
-Model:
-Documenting the training data and training process

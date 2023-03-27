@@ -8,18 +8,18 @@ mapKurator is a **fully automatic** pipeline to process a large amount of scanne
 - **Blue boxes:** Inputs of the modules
 - **Green boxes:** Outputs of the modules
 
-<img width="1627" alt="image" src="https://user-images.githubusercontent.com/5383572/189727942-80ad63c6-6c2e-478a-9992-c0f1519a0549.png">
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/5383572/189727942-80ad63c6-6c2e-478a-9992-c0f1519a0549.png">
 
 ### Model Details
-- **ImageCropping** module divides huge map images (>10K pixels) to map image patches (1000 x 1000 pixels) for **PatchTextSpotter** module to process.
+- **ImageCropping** divides huge map images (>10K pixels) to map image patches (1000 x 1000 pixels) for **PatchTextSpotter** to process.
 
-- **PatchTextSpotter** module automatically detects and recognizes the text labels on map image patches. We offer two state-of-the-art approaches for text spotting and provide the models trained with synthetic datasets and human annotations.
+- **PatchTextSpotter** automatically detects and recognizes the text labels on map image patches. The mapKurator system offers two state-of-the-art approaches for text spotting, where the models are trained with synthetic datasets and human annotations.
 
-- **PatchtoMapMerging** module merges the patch-level spotting results into map-level. The output polygons can be loaded in QGIS for visualization, and they should be aligned with the *ungeorefernced* map image. **Note:** JP2 files should be converted to JPEG before loading in QGIS. 
+- **PatchtoMapMerging** merges the patch-level spotting results into map-level. The output polygons can be loaded in QGIS for visualization, and they should be aligned with the *ungeorefernced* map image. **Note:** JP2 files should be converted to JPEG before loading in QGIS. 
 
-- **GeocoordinateConverter** module converts the bounding polygons of text labels from the image coordinates system to the geocoordinates system. **Note**: The polygons in both coordinate systems are saved in the output. 
+- **GeocoordinateConverter**  converts the bounding polygons of text labels from the image coordinates system to the geocoordinates system. **Note**: The polygons in both coordinate systems are saved in the output. 
 
 - **PostOCR & EntityLinker** 
-  - **PostOCR** module helps to verify the output and correct misspelled words from **PatchTextSpotter** using the OpenStreetMap dictionary. PostOCR module finds words' candidates using [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from elasticsearch, which contains the place name attribute from the Openstreetmap dictionary. Once PostOCR module identifies words' candidates, the module picks one candidate by the word popularity from the dictionary.
+  - **PostOCR** aims to verify the output and correct misspelled words from **PatchTextSpotter** using the OpenStreetMap dictionary. **PostOCR** identifies words' candidates using [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from elasticsearch, which contains the place name attribute from Openstreetmap. Then **PostOCR** picks one candidate by the word popularity from the dictionary.
 
-  - **EntityLinker** module links each map text to the candidate geo-entities in the OpenStreetMap. The entity linking retrieves the candidates that satisfy two criteria: 1) the word candidate retrieved from PostOCR module contains the geo-entities' name 2) the geocoordinates of geo-entities are within the map boundary. (Geo-coordinates are obtained from GeocoordConverter)
+  - **EntityLinker** links each map text to the candidate geo-entities in the OpenStreetMap. The entity linking retrieves the candidates that satisfy two criteria: 1) the word candidate retrieved from PostOCR module contains the geo-entities' name 2) the geocoordinates of geo-entities are within the map boundary. (Geo-coordinates are obtained from GeocoordConverter)
