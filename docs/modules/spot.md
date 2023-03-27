@@ -3,6 +3,9 @@
 
 Code:
 
+The Spotter V2 is built upon the Deformable DETR 
+
+
 Spotter V2 (Knowledge Computing Github) (one paragraph to describe the difference from TESTR)
 
 mapKurator pipeline with TESTR and Spotter V2* (Knowledge Computing Github)
