@@ -86,8 +86,10 @@
       <a href="https://www.linkedin.com/in/tanishashrotriya/">Tanisha Shrotriya</a>
     </td>
     <td align="center">
+      <!-- <img width="150" height="150"
+      src="_media/Chiang_Yao-Yi.jpeg"> -->
       <img width="150" height="150"
-      src="_media/Chiang_Yao-Yi.jpeg">
+      src="https://ca.slack-edge.com/T02ANE8G2PL-U02A7N193GX-15bd8cce6c21-512">
       <br />
       <a href="https://yaoyichi.github.io/">Yao-Yi Chiang</a>
     </td>
