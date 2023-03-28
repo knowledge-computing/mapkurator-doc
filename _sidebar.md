@@ -10,7 +10,7 @@
   - [Geocoordinate Converter](docs/modules/geo-convert.md)
   - [PostOCR & EntityLinker](docs/modules/postocr.md)
 
-- Ongoing
+- Ongoing Research
   - [Multilingual Spotting](docs/multilingual.md)
   - [Fine-grain Text Spotting](docs/finegrain.md)
 
