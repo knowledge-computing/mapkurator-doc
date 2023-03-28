@@ -10,6 +10,9 @@
   - [Geocoordinate Converter](docs/modules/geo-convert.md)
   - [PostOCR & EntityLinker](docs/modules/postocr.md)
 
+- Ongoing
+  - [Multilingual Spotting](docs/multilingual.md)
+  - [Fine-grain Text Spotting](docs/finegrain.md)
 
 - Use Stand-alone mapKurator
 
