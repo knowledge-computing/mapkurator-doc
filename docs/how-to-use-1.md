@@ -31,7 +31,13 @@ optional arguments:
 @zekun @yijun @jina @min @leeje 
 Provide sample commands to run each module
 
-Example for running the spotting module
+Example for running the **cropping** module
+```python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
+                  --expt_name='57k_maps' 
+                  --module_cropping
+```
+
+Example for running the **spotting** module
 ```
 python run.py --module_text_spotting 
               --text_spotting_model_dir ./spotter-v2/PALEJUN/
