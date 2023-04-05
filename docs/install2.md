@@ -11,14 +11,18 @@ Run the following command to start the docker container.
 
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p 9900:9900 knowledgecomputing/mapkurator_recogito_2023```  
 
-### Section 1: Remote instance of docker image on a server - 
+### Section 1: Run docker image on a remote server - 
 If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below - 
 
 For this you will require two terminals in which the docker container must be run. You  may choose to setup the [dev container](https://code.visualstudio.com/docs/devcontainers/tutorial) for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this [link](https://code.visualstudio.com/docs/devcontainers/attach-container)   
 The steps below assume that you are working with a simple bash terminal. 
-#### Step 1:   
-#### Step 2:   
-#### Step 3:   
+The docker image requires two bash terminals to run the mapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has GPU support and Linux OS <add version>. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser. If you are using a windows machine as the localhost, a git bash terminal or VSCode installation may be required, or the use of Windows WSL. The assumption is that a bash terminal is available at your disposal. 
+#### Step 1: Connect to Remote Server
+#### Step 2: Run New Docker Container 
+ If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3. 
+#### Step 3: Run Existing Docker Container 
+ If you are already inside your docker container after following step 2, please skip to step 4. 
+#### Step 4: Execute Second Instance of Docker Container
 
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
 
