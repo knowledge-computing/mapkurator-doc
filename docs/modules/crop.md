@@ -17,8 +17,9 @@ To run cropping, you can call `run.py` with the following command:
 ```python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  --expt_name='57k_maps' --module_cropping```
 
 where
-`--sample_map_csv_path` stores the metadata of the input map
-`--module_cropping` turns on the cropping module in this run
+
+* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ). 
+* `--module_cropping` turns on the cropping module in this run
 
 #### 2) Use crop_img.py
 If you do not have a metadata csv file, or wish to specify the input path of image directly, you can use `crop_img.py` in `m2_detection_recognition` folder. 
