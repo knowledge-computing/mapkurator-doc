@@ -8,7 +8,8 @@ mapKurator is a **fully automatic** pipeline to process a large amount of scanne
 - **Blue boxes:** Inputs of the modules
 - **Green boxes:** Outputs of the modules
 
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/5383572/189727942-80ad63c6-6c2e-478a-9992-c0f1519a0549.png">
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/5383572/230233058-b4852134-9e2c-4622-af69-d8794cf298ed.png">
+
 
 ### Model Details
 - **ImageCropping** divides huge map images (>10K pixels) to map image patches (1000 x 1000 pixels) for **PatchTextSpotter** to process.
