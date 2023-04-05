@@ -10,7 +10,7 @@ Processing the tiles with text spotting model in parallel means that multiple ti
 
 ### Commands 
 
-#### Use run.py 
+#### 1) Use run.py 
 
 To run cropping, you can call `run.py` with the following command: 
 
@@ -20,7 +20,7 @@ where
 `--sample_map_csv_path` stores the metadata of the input map
 `--module_cropping` turns on the cropping module in this run
 
-#### Use crop_img.py
+#### 2) Use crop_img.py
 If you do not have a metadata csv file, or wish to specify the input path of image directly, you can use `crop_img.py` in `m2_detection_recognition` folder. 
 
 Sample command: 
