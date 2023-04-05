@@ -19,41 +19,41 @@ The steps below assume that you are working with a simple bash terminal.
 The docker image requires two bash terminals to run the mapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has GPU support and Linux OS <add version>. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser. If you are using a windows machine as the localhost, a git bash terminal or VSCode installation may be required, or the use of Windows WSL. The assumption is that a bash terminal is available at your disposal. 
 #### Step 1: Connect to Remote Server
 #### Step 2: Run New Docker Container 
- If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3. 
-#### Step 3: Run Existing Docker Container 
- If you are already inside your docker container after following step 2, please skip to step 4. 
-#### Step 4: Execute Second Instance of Docker Container
-
+ If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to 
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
+
+Step 3. 
+#### Step 3: Run Existing Docker Container 
+ If you are already inside your docker container after following step 2, please skip to step 4.   
+ ```docker ps```
+ ```docker start -i <CONTAINER_ID>```
+#### Step 4: Run Postgres and ElasticSearch in Docker Container 
+Ensure that you see the following list of folders in the home directory. <INSERT Directory Image>  
+As root user run the command -> ```service postgresql start```  
+Switch user to elasticuser with command -> ```sudo su elasticuser```  
+Run elastic search.   
+ ```cd /home/elasticuser/elasticsearch-5.6.5/```    
+```bin/elasticsearch```    
+Expected output <INSERT Image>
+#### Step 5: Execute Second Instance of Docker Container
+```docker exec -it <CONTAINER_ID> bash``` 
+Activate conda environment created for mapKurator-system and run the Recogito web-application.    
+```conda activate mapkurator```  
+```cd home/recogito2```  
+```sbt "runProd -Dhttp.port=9990"```  
+Expected output - <INSERT Image>  
+#### Step 6: Forward Server Port to Localhost 
+To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server. 
+```ssh -L 9800:localhost:9803 tanisha@cs-u-sansa.cs.umn.edu```
+
 
 ### Section 2: Local instance of docker image –
 If you are planning to run the docker image on your local machine, then you should be able to view the recogito website on the local port of your choosing. 
-Run the docker container with the following command -    
+Run the docker container with the following command -      
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
 The website should be visible at - [localhost:<YOUR_PORT_ON_LOCAL>](localhost:<YOUR_PORT_ON_LOCAL>)   
 
 
-Forward the port form server to local   
-ssh -L 9980:localhost:9980 tanisha@cs-u-sansa.cs.umn.edu  
-
-Ensure that you see the following list of folders in the home directory.  
-Good job!  
-To start recogito, you need to run the following commands in one terminal –  
-Open a terminal  
- 
-As root user -   
-service postgresql start  
-Switch user to -  
-sudo su elasticuser  
-cd /home/elasticuser/elasticsearch-5.6.5/  
-bin/elasticsearch  
- 
-Open new terminal  
-docker exec -it <container_id> bash  
-cd home/recogito2  
-conda activate mapkurator  
-sbt "runProd -Dhttp.port=9990"  
- 
 You should be able to see the following page in the browser when you go to –  
 If you want to learn more about how this image was created, please follow the guide at.  
 
