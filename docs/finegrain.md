@@ -44,4 +44,25 @@ After training, when visualizing the patch feature vectors with t-SNE, we can se
 
 
 ### Generate Synthetic Maps for Fine-graned Spotting 
+We then average the patch-level features to obtain the map-level features, and then run DBSCAN to cluster map-level features and group them into clusters. The advantage of DBSCAN is that we don't need to specify the number of clusters, and the algorithm will determine that automatically based on the distance threshold. 
 
+DBSCAN gives us ~70 main clusters in total, and conducted further experiments on the top-4 clusters with the most number of maps. 
+
+We use the same method proposed by [Li et al. 2021](https://dl.acm.org/doi/abs/10.1145/3486635.3491070) and train CycleGAN to generate map backgrounds, and use QGIS python API to overlay the text labels on the map backgrounds. 
+
+Some sample images from each cluster are shown here: 
+<img width="961" alt="image" src="https://user-images.githubusercontent.com/5383572/230460055-5a7d534c-6dec-498d-8b5b-a4d3797713f9.png">
+
+
+
+**Reference**
+
+```
+@inproceedings{li2021synthetic,
+  title={Synthetic map generation to provide unlimited training data for historical map text detection},
+  author={Li, Zekun and Guan, Runyu and Yu, Qianmu and Chiang, Yao-Yi and Knoblock, Craig A},
+  booktitle={Proceedings of the 4th ACM SIGSPATIAL International Workshop on AI for Geographic Knowledge Discovery},
+  pages={17--26},
+  year={2021}
+}
+```
