@@ -1,7 +1,7 @@
 - Getting started
   
   - [What is mapKurator](docs/introduction.md)
-  - [Quick start](docs/quickstart.md)
+<!--   - [Quick start](docs/quickstart.md) -->
 
 - mapKurator Modules
   - [Image Cropping Module](docs/modules/crop.md)
@@ -10,9 +10,6 @@
   - [Geocoordinate Converter](docs/modules/geo-convert.md)
   - [PostOCR & EntityLinker](docs/modules/postocr.md)
 
-- Ongoing Research
-  - [Multilingual Spotting](docs/multilingual.md)
-  - [Fine-grain Text Spotting](docs/finegrain.md)
 
 - Use Stand-alone mapKurator
 
@@ -23,6 +20,11 @@
 - Use mapKurator with Recogito
   - [Installation](docs/install2.md)
   - [How to Use](docs/how-to-use-2.md)
+
+
+- Ongoing Research
+  - [Multilingual Spotting](docs/multilingual.md)
+  - [Fine-grain Text Spotting](docs/finegrain.md)
 
 - Data and Results
   - [Ordnance Survey Maps](docs/os.md)
