@@ -28,7 +28,7 @@ optional arguments:
   --print_command
   ```
 
-@zekun @yijun @jina @min @leeje 
+ @jina @min @leeje 
 Provide sample commands to run each module
 
 Example for running the **cropping** module
