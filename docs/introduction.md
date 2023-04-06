@@ -1,6 +1,6 @@
 
 
-mapKurator is a fully automatic pipeline developed by **Knowledge Computing Lab, University of Minnesota** to process a large number of scanned historical map images. **Outputs** include the recognized text labels, label bounding polygons, labels after post-OCR correction, and a geo-entity identifier from OpenStreetMap.
+mapKurator is a fully automatic pipeline developed by the **Knowledge Computing Lab** at the **University of Minnesota** to process a large number of scanned historical map images. **Outputs** include the recognized text labels, label bounding polygons, labels after post-OCR correction, and a geo-entity identifier from OpenStreetMap.
 
 ### Model Summary
 
