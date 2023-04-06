@@ -21,11 +21,12 @@ The docker image requires two bash terminals to run the mapKurator-Recogito Inte
 #### Step 2: Run New Docker Container     
  If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.    
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_REMOTE_SERVER>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```     
- 
+<img src="_media/docker/2_docker.png">
 #### Step 3: Run Existing Docker Container 
  If you are already inside your docker container after following step 2, please skip to step 4.     
  Get the container id 
  ```docker ps```    
+ <img src="_media/docker/4_dockerps.png">
  Start container
  ```docker start -i <CONTAINER_ID>```
 #### Step 4: Run Postgres and ElasticSearch in Docker Container 
@@ -35,7 +36,7 @@ Switch user to elasticuser with command -> ```sudo su elasticuser```
 Run elastic search.      
  ```cd /home/elasticuser/elasticsearch-5.6.5/```     
 ```bin/elasticsearch```     
-Expected output <INSERT Image>
+<img src="_media/docker/3_dockerdb.png">
 #### Step 5: Execute Second Instance of Docker Container
  Get the container id with 
  ```docker ps```     
@@ -45,7 +46,7 @@ Activate conda environment created for mapKurator-system and run the Recogito we
 ```conda activate mapkurator```  
 ```cd home/recogito2```  
 ```sbt "runProd -Dhttp.port=9990"```  
-Expected output - <INSERT Image>  
+
 #### Step 6: Forward Server Port to Localhost 
 To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server. 
 Open a new connection to the remote server using the following command. 
