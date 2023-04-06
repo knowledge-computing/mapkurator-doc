@@ -57,9 +57,11 @@ Activate conda environment created for mapKurator-system and run the Recogito we
 
 #### Step 6: Forward Server Port to Localhost 
 To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server. 
-Open a new connection to the remote server using the following command. 
-```ssh -L 9800:localhost:9803 tanisha@cs-u-sansa.cs.umn.edu```
-You should be able to see the following page in the browser. 
+Open a new connection to the remote server using the following command.    
+ 
+```ssh -L 9800:localhost:9803 tanisha@cs-u-sansa.cs.umn.edu```    
+      
+You should be able to see the following page in the browser.    
 <ADD IMAGE>
 
 ### Section 2: Docker Container on Local Machine     
