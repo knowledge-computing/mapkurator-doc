@@ -58,17 +58,3 @@ You should be able to see the following page in the browser.
 
  If you want to learn more about how this image was created, please follow the guide at.  
 
-#### How to Use Mapkurator     
-There are three types of data you can feed into recogito to run with  mapkurator.  
-
-File Upload - test if jp2 image works.   
-WMTS  
-IIIF  
-
-To run the sample files go to -   
-You can replace the spotter by editing the file Mapkurator.scala   
-If you want to unit test the mapkurator script, you can refer to the test commands in -   
-Common Errors and how to fix them -   
-
- 
-
