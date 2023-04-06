@@ -48,3 +48,10 @@ python run.py --module_text_spotting
               --spotter_config ./spotter-v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
               --spotter_expt_name test
 ```
+
+Example for running the **PatchtoMapMerging** module
+```
+python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
+                --expt_name='57k_maps' 
+                --module_img_geojson
+```
