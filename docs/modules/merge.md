@@ -20,8 +20,8 @@ python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadat
 where
 
 * `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ). 
-* --module_img_geojson:  turns on the stitching module for this run 
-* --expt_name: experiment name for running the pipeline
+* `--module_img_geojson`:  turns on the stitching module for this run 
+* `--expt_name`: experiment name for running the pipeline
 
 When using this approach, the input and output folder will be parsed automatically depending on the `expt_name`
 
@@ -34,8 +34,8 @@ Sample command:
 python3 stich_output.json --input_dir='folder_contains_patch_level_jsons' --output_geojson='map_level_prediction.geojson' --shift_size=1000 
 ```
 
-* --input_dir: input directory to the patch-level spotting results in json
-* --output_geojson: output path to save the map-level geojson
-* --shift_size: image patch size and shift size, should be the same as the one used in cropping module
+* `--input_dir`: input directory to the patch-level spotting results in json
+* `--output_geojson`: output path to save the map-level geojson
+* `--shift_size`: image patch size and shift size, should be the same as the one used in cropping module
 
 The above command saves the geometry y-coordinates as negative values. If you want to save them as positive values, add `--eval_only` parameter to the above command. But the geojson produced with `--eval_only` does not align with the map image in QGIS. 
