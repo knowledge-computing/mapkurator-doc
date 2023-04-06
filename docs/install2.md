@@ -3,11 +3,11 @@ To do so, first pull the [docker image](https://hub.docker.com/r/knowledgecomput
 
 `docker pull knowledgecomputing/mapkurator_recogito_2023:latest`    
  
-### Environment Details :     
+### Environment Details    
 This container was created on a remote server with the underlying host OS as Ubuntu 20.04.5 LTS.     
-The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested, due to lack of gpu resources on local machine for testing.    
+The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.
 
-### Section 1: Run docker image on a remote server -    
+### Section 1: Docker Container on a Remote Server     
 If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below -    
  
 For this you will require two terminals in which the docker container must be run. You  may choose to setup the [dev container](https://code.visualstudio.com/docs/devcontainers/tutorial) for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this [link](https://code.visualstudio.com/docs/devcontainers/attach-container).       
@@ -45,8 +45,15 @@ Open a new connection to the remote server using the following command.
 You should be able to see the following page in the browser. 
 <ADD IMAGE>
 
-### Section 2: Local instance of docker image     
-If you are planning to run the docker image on your local machine, then you should be able to view the recogito website on the local port of your choosing.     
+### Section 2: Docker Container on Local Machine     
+If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.    
+
+#### Linux OS - 
+Run the docker container with the following command -      
+```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
+The website should be visible at - localhost:\<YOUR_PORT_ON_LOCAL\>     
+ 
+#### Windows OS - 
 Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this [link](https://docs.docker.com/desktop/windows/wsl/).     
 
 Run the docker container with the following command -      
