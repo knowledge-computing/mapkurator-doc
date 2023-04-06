@@ -42,19 +42,23 @@ Expected output - <INSERT Image>
 To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server. 
 Open a new connection to the remote server using the following command. 
 ```ssh -L 9800:localhost:9803 tanisha@cs-u-sansa.cs.umn.edu```
+You should be able to see the following page in the browser. 
+<ADD IMAGE>
 
+### Section 2: Local instance of docker image     
+If you are planning to run the docker image on your local machine, then you should be able to view the recogito website on the local port of your choosing.     
+Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this [link](https://docs.docker.com/desktop/windows/wsl/).     
 
-### Section 2: Local instance of docker image –
-If you are planning to run the docker image on your local machine, then you should be able to view the recogito website on the local port of your choosing. 
 Run the docker container with the following command -      
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
-The website should be visible at - [localhost:<YOUR_PORT_ON_LOCAL>](localhost:<YOUR_PORT_ON_LOCAL>)   
+The website should be visible at - localhost:\<YOUR_PORT_ON_LOCAL\>     
 
+You should be able to see the following page in the browser. 
+<ADD IMAGE>
 
-You should be able to see the following page in the browser when you go to –  
-If you want to learn more about how this image was created, please follow the guide at.  
+ If you want to learn more about how this image was created, please follow the guide at.  
 
-How to Use Mapkurator :    
+#### How to Use Mapkurator     
 There are three types of data you can feed into recogito to run with  mapkurator.  
 
 File Upload - test if jp2 image works.   
