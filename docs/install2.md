@@ -65,4 +65,4 @@ You should be able to see the following page in the browser.
 
  If you want to learn more about how this image was created, please follow the guide at.  
 
- #### Common Errors During Installation
+ ### Common Errors During Installation
