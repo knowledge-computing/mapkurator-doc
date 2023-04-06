@@ -18,7 +18,7 @@ The docker image requires two bash terminals to run the mapKurator-Recogito Inte
 ```ssh <USER>@<SERVER>```     
  Connect to 2 bash terminals.    
      
- ![SSh command example]("_media/docker/1_ssh.png")    
+ ![SSH command example]("_media/docker/1_ssh.png")    
 #### Step 2: Run New Docker Container     
  If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.     
  
