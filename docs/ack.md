@@ -63,7 +63,7 @@
       <img width="150" height="150"
       src="https://avatars.githubusercontent.com/u/39498561?v=4">
       <br />
-      <a href="https://minnamgung.github.io/">Namgung Min</a>
+      <a href="https://minnamgung.github.io/">Min Namgung</a>
     </td>
     <td align="center">
       <img width="150" height="150"
