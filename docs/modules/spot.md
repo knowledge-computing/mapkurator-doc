@@ -9,13 +9,13 @@ The mapKurator system provides two state-of-the-art approaches for spotting text
 
 - Training Datasets
   - Synthetic datasets: TBD 
-    - We use SynthText to generate synthetic text images. Code: <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a>; Dataset: TBD;
-    - We propose an approach to generate synthetic maps that mimic the text (e.g., font, spacing, orientation) and background styles in the real historical maps. Code: TBD; Dataset: TBD;
-    
-    <img width="880" alt="image" src="/_media/syntext_example.jpg">
-    <img width="880" alt="image" src="/_media/synmap_example.jpg">
-    - Curretly, the synthetic datasets are in English, Arabic, Russian, and Chinese. We use those datasets for training multilingual text spotters.
+    - We select 40k text-free background images from <a href="https://cocodataset.org/#home" target="_blank">COCO</a> and use them to generate synthetic text images. <b>Code:</b> <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a>; <b>Dataset:</b> TBD;
+    - We propose an approach to generate synthetic maps that mimic the text (e.g., font, spacing, orientation) and background styles in the real historical maps. <b>Code:</b> TBD; <b>Dataset:</b> TBD;
+    - The synthetic datasets are in English, Arabic, Russian, and Chinese. We use these datasets for training multilingual text spotters.
   - Human Annotations: TBD
+
+<img width="880" alt="image" src="../../_media/syntext_example.jpg">
+<img width="880" alt="image" src="../../_media/synmap_example.jpg">    
 
 - Text Spotters
   - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>
@@ -34,7 +34,7 @@ To run spotting, you can call `run.py` with the following command:
 
 ```
 python run.py --module_text_spotting 
-              --sample_map_csv_path ./sample_maps.csv
+              --sample_map_csv_path /home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv
               --text_spotting_model_dir ./spotter-v2/PALEJUN/
               --expt_name sample_maps 
               --spotter_model spotter-v2
