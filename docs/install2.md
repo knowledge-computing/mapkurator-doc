@@ -18,20 +18,20 @@ The docker image requires two bash terminals to run the mapKurator-Recogito Inte
 ```ssh <USER>@<SERVER>```     
  Connect to 2 bash terminals.    
      
- <img src="_media/docker/1_ssh.png">     
+ ![SSh command example]("_media/docker/1_ssh.png")    
 #### Step 2: Run New Docker Container     
  If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.     
  
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_REMOTE_SERVER>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```     
       
-<img src="_media/docker/2_docker.png">     
+![Docker run example]("_media/docker/2_docker.png")      
       
 #### Step 3: Run Existing Docker Container 
  If you are already inside your docker container after following step 2, please skip to step 4.     
  Get the container id 
  ```docker ps```     
         
- <img src="_media/docker/4_dockerps.png">     
+ ![Docker ps example]("_media/docker/4_dockerps.png")     
        
  Start container
  ```docker start -i <CONTAINER_ID>```
@@ -43,7 +43,7 @@ Run elastic search.
  ```cd /home/elasticuser/elasticsearch-5.6.5/```     
 ```bin/elasticsearch```     
       
-<img src="_media/docker/3_dockerdb.png">     
+![Elasticsearch and Postgres Example]("_media/docker/3_dockerdb.png")       
         
 #### Step 5: Execute Second Instance of Docker Container
  Get the container id with 
