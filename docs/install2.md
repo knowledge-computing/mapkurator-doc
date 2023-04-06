@@ -20,7 +20,8 @@ The docker image requires two bash terminals to run the mapKurator-Recogito Inte
      
  <img src="_media/docker/1_ssh.png">     
 #### Step 2: Run New Docker Container     
- If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.    
+ If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.     
+ 
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_REMOTE_SERVER>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```     
       
 <img src="_media/docker/2_docker.png">     
