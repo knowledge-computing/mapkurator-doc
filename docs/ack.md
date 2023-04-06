@@ -25,7 +25,7 @@
   <tbody>
    <tr>
     <td align="center">
-      <a href="https://www.turing.ac.uk/"><img width="200"
+      <a href="https://www.turing.ac.uk/"><img width="250"
       src="https://www.hdruk.ac.uk/wp-content/uploads/2022/05/Turing-logo-black-scaled-e1673865969893-300x158.jpg"></a> 
     </td>
     <td align="center">
@@ -36,23 +36,23 @@
       <a href="https://www.loc.gov/"><img width="250"
       src="https://www.loc.gov/static/images/logo-loc-new-branding.svg"></a> 
     </td>
-    
-  </tr>
+  </tbody>
+</table>    
+
+<table>
+  <tbody>
      <tr>
     <td align="center">
       <a href="https://www.nls.uk/"><img width="250"
       src="https://stor.artstor.org/stor/fd907285-3302-4fb1-93cb-a3782549f57b_size4"></a> 
     </td>
     <td align="center">
-      <a href="https://r-dmuch.jp/"><img width="200"
+      <a href="https://r-dmuch.jp/"><img width="250"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Logo_rits_univ.svg/1200px-Logo_rits_univ.svg.png"></a> 
     </td>
-
-       
-    
   </tr>
   
-  <tbody>
+  </tbody>
 </table>
 
 ### Contributors
