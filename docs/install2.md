@@ -1,4 +1,4 @@
-<style>body {text-align: justify}
+
 Mapkurator now has its very own docker image! It can be used with the [Recogito](https://github.com/pelagios/recogito2) software by Pelagios.     
 To do so, first pull the [docker image](https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags) with the following command -     
 
@@ -67,4 +67,3 @@ You should be able to see the following page in the browser.
  If you want to learn more about how this image was created, please follow the guide at.  
 
  ### Common Errors During Installation
- </style>
