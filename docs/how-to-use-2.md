@@ -19,4 +19,5 @@ You can replace the spotter by editing the file Mapkurator.scala
 If you want to unit test the mapkurator script, you can refer to the test commands in -   
 Common Errors and how to fix them -   
 
+#### Common Errors 
  
