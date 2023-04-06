@@ -1,6 +1,6 @@
 
 
-### Sponsor
+### Sponsors
 
 <table>
   <tbody>
