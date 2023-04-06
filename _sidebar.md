@@ -30,5 +30,4 @@
   - [Ordnance Survey Maps](docs/os.md)
   - [Sanborn Maps](docs/sanborn.md)
 
-- [Evolution](docs/evolution.md)
 - [Acknowledgement](docs/ack.md)
