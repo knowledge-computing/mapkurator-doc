@@ -16,17 +16,22 @@ The steps below assume that you are working with a simple bash terminal.
 The docker image requires two bash terminals to run the mapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has GPU support and Linux OS <add version>. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser. If you are using a windows machine as the localhost, a git bash terminal or VSCode installation may be required, or the use of Windows WSL. The assumption is that a bash terminal is available at your disposal.    
 #### Step 1: Connect to Remote Server   
 ```ssh <USER>@<SERVER>```     
- Connect to 2 bash terminals. 
- <img src="_media/docker/1_ssh.png">
+ Connect to 2 bash terminals.    
+     
+ <img src="_media/docker/1_ssh.png">     
 #### Step 2: Run New Docker Container     
  If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.    
 ```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_REMOTE_SERVER>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```     
-<img src="_media/docker/2_docker.png">
+      
+<img src="_media/docker/2_docker.png">     
+      
 #### Step 3: Run Existing Docker Container 
  If you are already inside your docker container after following step 2, please skip to step 4.     
  Get the container id 
- ```docker ps```    
- <img src="_media/docker/4_dockerps.png">
+ ```docker ps```     
+        
+ <img src="_media/docker/4_dockerps.png">     
+       
  Start container
  ```docker start -i <CONTAINER_ID>```
 #### Step 4: Run Postgres and ElasticSearch in Docker Container 
@@ -36,7 +41,9 @@ Switch user to elasticuser with command -> ```sudo su elasticuser```
 Run elastic search.      
  ```cd /home/elasticuser/elasticsearch-5.6.5/```     
 ```bin/elasticsearch```     
-<img src="_media/docker/3_dockerdb.png">
+      
+<img src="_media/docker/3_dockerdb.png">     
+        
 #### Step 5: Execute Second Instance of Docker Container
  Get the container id with 
  ```docker ps```     
