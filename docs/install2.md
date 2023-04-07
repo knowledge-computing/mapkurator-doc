@@ -1,87 +1,82 @@
 
-Mapkurator now has its very own docker image! It can be used with the [Recogito](https://github.com/pelagios/recogito2) software by Pelagios.     
-To do so, first pull the [docker image](https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags) with the following command -     
+<body>
+<p align = "justify"> Mapkurator now has its very own docker image! It can be used with the <a href="https://github.com/pelagios/recogito2">Recogito</a> software by Pelagios. To do so, first pull the <a href="https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags">docker image</a> with the following command -<br> </p> 
 
-`docker pull knowledgecomputing/mapkurator_recogito_2023:latest`    
+<code> docker pull knowledgecomputing/mapkurator_recogito_2023:latest </code>
  
-### Environment Details    
-This container was created on a remote server with the underlying host OS as Ubuntu 20.04.5 LTS.     
-The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.
-
-### Section 1: Docker Container on a Remote Server     
-If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below -    
+<h3> Environment Details  </h3>  
+<p align = "justify"> This container was created on a remote server with the underlying host OS as Ubuntu 20.04.5 LTS.<br>     
+The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.<br>
+</p>
+<h3> Section 1: Docker Container on a Remote Server </h3>     
+<p align="justify"> If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below -<br>    
+For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br>     
+The steps below assume that you are working with a simple bash terminal.<br>    
+The docker image requires two bash terminals to run the MapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser.<br>
  
-For this you will require two terminals in which the docker container must be run. You  may choose to setup the [dev container](https://code.visualstudio.com/docs/devcontainers/tutorial) for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this [link](https://code.visualstudio.com/docs/devcontainers/attach-container).       
-The steps below assume that you are working with a simple bash terminal.    
-The docker image requires two bash terminals to run the mapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has GPU support and Linux OS <add version>. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser. If you are using a windows machine as the localhost, a git bash terminal or VSCode installation may be required, or the use of Windows WSL. The assumption is that a bash terminal is available at your disposal.    
-#### Step 1: Connect to Remote Server   
-```ssh <USER>@<SERVER>```     
- Connect to 2 bash terminals.    
-     
- ![SSH command example]("_media/docker/1_ssh.png")    
-#### Step 2: Run New Docker Container     
- If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.     
+<h4> Step 1: Connect to Remote Server </h4> 
+<code>ssh USER@SERVER</code><br>     
+ Connect to 2 bash terminals.<br><br>       
+    
+<img src="/docs/assets/1_ssh.png" height=400 width=550 alt="SSH Example">
  
-```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_REMOTE_SERVER>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```     
+<h4> Step 2: Run New Docker Container </h4> 
+ If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>     
+ 
+<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code>   
       
-![Docker run example]("_media/docker/2_docker.png")      
+<img src="/docs/assets/2_docker.png" height=400 width=550 alt="Docker Run Example">      
       
-#### Step 3: Run Existing Docker Container 
- If you are already inside your docker container after following step 2, please skip to step 4.     
- Get the container id 
- ```docker ps```     
+<h4> Step 3: Run Existing Docker Container </h4>
+If you are already inside your docker container after following step 2, please skip to step 4.<br>     
+Get the container id <br> 
+<code>docker ps</code><br><br>     
+<img src="/docs/assets/4_dockerps.png" height=70 width=400 alt="Docker ps example"><br>     
+Start container<br>
+<code>docker start -i CONTAINER_ID</code><br>
+<h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
+As root user run the command -> <code> service postgresql start </code><br>  
+Switch user to elasticuser with command -> <code> sudo su elasticuser </code><br>  
+Run elastic search. <br>      
+<code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
+<code> bin/elasticsearch </code><br><br>
+      
+<img src="/docs/assets/3_dockerdb.png" height=600 width=700 alt="Elasticsearch and Postgres Example"><br>      
         
- ![Docker ps example]("_media/docker/4_dockerps.png")     
-       
- Start container
- ```docker start -i <CONTAINER_ID>```
-#### Step 4: Run Postgres and ElasticSearch in Docker Container 
-Ensure that you see the following list of folders in the home directory. <INSERT Directory Image>    
-As root user run the command -> ```service postgresql start```    
-Switch user to elasticuser with command -> ```sudo su elasticuser```    
-Run elastic search.      
- ```cd /home/elasticuser/elasticsearch-5.6.5/```     
-```bin/elasticsearch```     
-      
-![Elasticsearch and Postgres Example]("_media/docker/3_dockerdb.png")       
-        
-#### Step 5: Execute Second Instance of Docker Container
- Get the container id with 
- ```docker ps```     
- Execute container 
-```docker exec -it <CONTAINER_ID> bash```       
-Activate conda environment created for mapKurator-system and run the Recogito web-application.    
-```conda activate mapkurator```  
-```cd home/recogito2```  
-```sbt "runProd -Dhttp.port=9990"```  
+<h4>Step 5: Execute Second Instance of Docker Container</h4>
+Get the container id with <code>docker ps</code><br>     
+Execute container <code>docker exec -it <CONTAINER_ID> bash</code><br>       
+Activate conda environment created for mapKurator-system and run the Recogito web-application.<br>    
+<code>conda activate mapkurator</code><br>
+<code>cd home/recogito2</code><br>
+<code>sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER"</code><br>
 
-#### Step 6: Forward Server Port to Localhost 
-To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server. 
-Open a new connection to the remote server using the following command.    
+<h4>Step 6: Forward Server Port to Localhost</h4>
+To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server.<br> 
+Open a new connection to the remote server using the following command.<br>    
  
-```ssh -L 9800:localhost:9803 tanisha@cs-u-sansa.cs.umn.edu```    
+<code>ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER</code><br>
       
-You should be able to see the following page in the browser.    
+You should be able to see the following page in the browser.<br>    
 <ADD IMAGE>
 
-### Section 2: Docker Container on Local Machine     
-If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.    
+<h3> Section 2: Docker Container on Local Machine </h3>     
+If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
 
-#### Linux OS - 
-Run the docker container with the following command -      
-```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
-The website should be visible at - localhost:\<YOUR_PORT_ON_LOCAL\>     
+<h3> Linux OS  </h3>
+Run the docker container with the following command -<br>
+<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
+The website should be visible at - localhost:YOUR_PORT_ON_LOCAL <br>    
  
-#### Windows OS - 
+<h3> Windows OS </h3> 
 Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this [link](https://docs.docker.com/desktop/windows/wsl/).     
 
-Run the docker container with the following command -      
-```docker run -it --name <REPLACE_WITH_YOUR_NAME> --gpus all -p <YOUR_PORT_ON_LOCAL>:<YOUR_PORT_ON_DOCKER> knowledgecomputing/mapkurator_recogito_2023```   
-The website should be visible at - localhost:\<YOUR_PORT_ON_LOCAL\>     
+Run the docker container with the following command -<br>
+<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
+The website should be visible at - localhost:YOUR_PORT_ON_LOCAL <br>    
 
 You should be able to see the following page in the browser. 
-<ADD IMAGE>
-
- If you want to learn more about how this image was created, please follow the guide at.  
+<ADD IMAGE> 
 
  ### Common Errors During Installation
+</body>
