@@ -40,12 +40,11 @@ Run elastic search. <br>
 <img src="_media/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
-<p align="justify"> Get the container id with <code> docker ps </code><br>     
-Execute container <code> docker exec -it <CONTAINER_ID> bash </code><br>       
-Activate conda environment created for mapKurator-system and run the Recogito web-application.<br>    
-<code> conda activate mapkurator </code><br>
-<code> cd home/recogito2 </code><br>
-<code> sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER" </code><br> </p>
+<p align="justify"> Get the container id with the command <code> docker ps </code><br>     
+Execute container with the command <code> docker exec -it <CONTAINER_ID> bash </code><br>       
+Change directory to recogito2 with the command <code> cd home/recogito2 </code><br>
+Activate conda environment created for mapKurator-system with the command <code> conda activate mapkurator </code><br>
+Run the Recogito web-application with the command <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER" </code><br> </p>
 
 <h4>Step 6: Forward Server Port to Localhost</h4>
 <p align="justify"> To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server.<br> 
