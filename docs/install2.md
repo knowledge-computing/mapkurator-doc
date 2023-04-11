@@ -9,22 +9,19 @@
 The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.<br>
 </p>
 <h3> Section 1: Docker Container on a Remote Server </h3>     
-<p align="justify"> If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below -<br>    
+<p align="justify"> If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below -<br> 
 For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br>     
 The steps below assume that you are working with a simple bash terminal.<br>    
 The docker image requires two bash terminals to run the MapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser.<br></p>
  
 <h4> Step 1: Connect to Remote Server </h4> 
 <code>ssh USER@SERVER</code><br>     
- Connect to 2 bash terminals.<br><br>       
-    
+Connect to 2 bash terminals.<br><br>           
 <img src="/docs/assets/1_ssh.png" height=400 width=550 alt="SSH Example">
  
 <h4> Step 2: Run New Docker Container </h4> 
 If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>     
- 
-<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code>   
-      
+<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br><br> 
 <img src="/docs/assets/2_docker.png" height=400 width=550 alt="Docker Run Example">      
       
 <h4> Step 3: Run Existing Docker Container </h4>
@@ -34,14 +31,14 @@ Get the container id <br>
 <img src="/docs/assets/4_dockerps.png" height=70 width=400 alt="Docker ps example"><br>     
 Start container<br>
 <code>docker start -i CONTAINER_ID</code><br>
+ 
 <h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
 As root user run the command -> <code> service postgresql start </code><br>  
 Switch user to elasticuser with command -> <code> sudo su elasticuser </code><br>  
 Run elastic search. <br>      
 <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
 <code> bin/elasticsearch </code><br><br>
-      
-<img src="/docs/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example"><br>      
+<img src="/docs/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
 Get the container id with <code>docker ps</code><br>     
@@ -54,36 +51,36 @@ Activate conda environment created for mapKurator-system and run the Recogito we
 <h4>Step 6: Forward Server Port to Localhost</h4>
 To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server.<br> 
 Open a new connection to the remote server using the following command.<br>    
- 
 <code>ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER</code><br>
       
 You should be able to see the following page in the browser.<br>    
 <img src="/docs/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-
 You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
 <img src="/docs/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
- 
 You will be redirected to the screen below.<br><br> 
 <img src="/docs/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>      
- 
 {% include install2video.html id="WYKBsvrISoE" %}
+ 
 <h3> Section 2: Docker Container on Local Machine </h3>     
 If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
 
-<h3> Linux OS  </h3>
+<h3> Linux OS </h3>
 Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
-The website should be visible at - localhost:YOUR_PORT_ON_LOCAL <br>    
+The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br>    
  
 <h3> Windows OS </h3> 
-Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this [link](https://docs.docker.com/desktop/windows/wsl/).     
+Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.     
 
 Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
-The website should be visible at - localhost:YOUR_PORT_ON_LOCAL <br>    
-
-You should be able to see the following page in the browser. 
-<ADD IMAGE> 
+The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br>     
+You should be able to see the following page in the browser.<br>    
+<img src="/docs/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
+<img src="/docs/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+You will be redirected to the screen below.<br><br> 
+<img src="/docs/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
 
  ### Common Errors During Installation
 </body>
