@@ -29,18 +29,18 @@ You can follow the video tutorial below, and use the commands shown in this docu
 <h4> Step 1: Connect to Remote Server </h4> 
 <p align="justify"> Connect to 2 bash terminals. One is used by step 4 and the other is used by step 5.<br>
 <code> ssh USER@SERVER </code><br></p>               
-<img src="_media/assets/1_ssh.png" height=400 width=550 alt="SSH Example">
+<img src="_media/assets/install2/1_ssh.png" height=400 width=550 alt="SSH Example">
  
 <h4> Step 2: Run New Docker Container </h4> 
 <p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>
 Run the docker container with the command shown below.<br></p>
 <div><code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> </div>
-<img src="_media/assets/2_docker.png" height=400 width=550 alt="Docker Run Example"> 
+<img src="_media/assets/install2/2_docker.png" height=400 width=550 alt="Docker Run Example"> 
  
 <h4> Step 3: Run Existing Docker Container </h4>
 <p align="justify"> If you are already inside your docker container after following step 2, please skip to step 4.<br>     
 Otherwise, get the container id -> <code> docker ps </code><br></p>  
-<img src="_media/assets/4_dockerps.png" height=70 width=400 alt="Docker ps example">     
+<img src="_media/assets/install2/4_dockerps.png" height=70 width=400 alt="Docker ps example">     
 <p align="justify">Start the container -> <code> docker start -i CONTAINER_ID </code><br></p>
  
 <h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
@@ -48,7 +48,7 @@ Otherwise, get the container id -> <code> docker ps </code><br></p>
 Switch user to elasticuser -> <code> sudo su elasticuser </code><br>  
 Switch directory to elasticsearch -> <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
 Run elasticsearch -> <code> bin/elasticsearch </code><br><br> </p>
-<img src="_media/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
+<img src="_media/assets/install2/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
 <p align="justify"> Get the container id -> <code> docker ps </code><br>     
@@ -63,11 +63,11 @@ Open a new connection to the remote server using the following command.<br>
  <code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br> </p>
       
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
-<img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+<img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
 <p align="justify">You can login with the test user with details as <b>username:</b> Test2, <b>password:</b> Test123 or create a new user as well.<br></p>
-<img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+<img src="_media/assets/install2/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
-<img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+<img src="_media/assets/install2/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
      
 <h3 id="section2"> 
  <a href="#/docs/install2?id=section2" data-id="section2" class="anchor">
@@ -91,11 +91,11 @@ Follow steps 1 through 2-4 in section 1. The website should be visible at - <cod
 Follow steps 1 through 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
-<img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+<img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
 <p align="justify">You can login with the test user with details as <b>username:</b> Test2, <b>password:</b> Test123 or create a new user as well.<br></p>
-<img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+<img src="_media/assets/install2/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
-<img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+<img src="_media/assets/install2/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
 
 <h3 id="errors"> 
 <a href="#/docs/install2?id=errors" data-id="errors" class="anchor">
@@ -106,9 +106,15 @@ Follow steps 1 through 2-4 in section 1. The website should be visible at - <cod
 </h3> 
  
 <ol>
- <li></li> Check that you started the "mapkurator" conda environment with <code> conda activate mapkurator </code>
- <li></li> Check that your elastic search instance is running properly, go to Step 4 in Section 1.
- <li></li> Check that you are in the recogito2 directory before running the sbt command. 
+ <li> Check that you started the "mapkurator" conda environment with <code> conda activate mapkurator </code>
+ <img src="_media/assets/mapkrec_how2/error1.png" height=250 width=400 alt="User Homepage"><br>   
+ </li>
+ <li> Check that your elastic search instance is running properly, go to Step 4 in Section 1.
+ <img src="_media/assets/mapkrec_how2/error2.png" height=250 width=400 alt="User Homepage"><br>   
+ </li>
+ <li>Check that you are in the recogito2 directory before running the sbt command. 
+ <img src="_media/assets/mapkrec_how2/error3.png" height=250 width=400 alt="User Homepage"><br> 
+ </li>
  
  </ol>
 </body>
