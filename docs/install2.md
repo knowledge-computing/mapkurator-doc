@@ -107,13 +107,13 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
  
 <ol>
  <li> Check that you started the "mapkurator" conda environment with <code> conda activate mapkurator </code><br>
- <img src="_media/assets/how2use2/error1.png" height=250 width=400 alt="User Homepage"><br>   
+ <img src="_media/assets/install2/error1.png" height=250 width=400 alt="Error message when conda env is not active"><br>   
  </li>
  <li> Check that your elastic search instance is running properly, go to Step 4 in Section 1.<br>
- <img src="_media/assets/how2use2/error2.png" height=250 width=400 alt="User Homepage"><br>   
+ <img src="_media/assets/install2/error2.png" height=250 width=400 alt="Error message when elastic search is not running"><br>   
  </li>
  <li>Check that you are in the recogito2 directory before running the sbt command.<br>
- <img src="_media/assets/how2use2/error3.png" height=250 width=400 alt="User Homepage"><br> 
+ <img src="_media/assets/install2/error3.png" height=250 width=400 alt="Error message when recogito2 is not the current working directory"><br> 
  </li>
  
  </ol>
