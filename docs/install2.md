@@ -18,33 +18,30 @@ You can follow the video tutorial below, and use the commands shown in this docu
 <img src="_media/assets/1_ssh.png" height=400 width=550 alt="SSH Example">
  
 <h4> Step 2: Run New Docker Container </h4> 
-<p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br></p>  
+<p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>
+Run the docker container with the command shown below.<br></p>
 <div><code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> </div>
 <img src="_media/assets/2_docker.png" height=400 width=550 alt="Docker Run Example"> 
  
 <h4> Step 3: Run Existing Docker Container </h4>
-<p align="justify">
-If you are already inside your docker container after following step 2, please skip to step 4.<br>     
-Get the container id <br></p> 
-<code> docker ps </code><br><br>     
+<p align="justify"> If you are already inside your docker container after following step 2, please skip to step 4.<br>     
+Otherwise, get the container id -> <code> docker ps </code><br></p>  
 <img src="_media/assets/4_dockerps.png" height=70 width=400 alt="Docker ps example">     
-<p align="justify">Start container<br></p>
-<code> docker start -i CONTAINER_ID </code><br>
+<p align="justify">Start the container -> <code> docker start -i CONTAINER_ID </code><br></p>
  
 <h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
-<p align="justify"> As root user run the command -> <code> service postgresql start </code><br>  
-Switch user to elasticuser with command -> <code> sudo su elasticuser </code><br>  
-Run elastic search. <br>      
-<code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
-<code> bin/elasticsearch </code><br><br> </p>
+<p align="justify"> As root user start postgres -> <code> service postgresql start </code><br>  
+Switch user to elasticuser -> <code> sudo su elasticuser </code><br>  
+Switch directory to elasticsearch -> <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
+Run elasticsearch -> <code> bin/elasticsearch </code><br><br> </p>
 <img src="_media/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
-<p align="justify"> Get the container id with the command <code> docker ps </code><br>     
-Execute container with the command <code> docker exec -it <CONTAINER_ID> bash </code><br>       
-Change directory to recogito2 with the command <code> cd home/recogito2 </code><br>
-Activate conda environment created for mapKurator-system with the command <code> conda activate mapkurator </code><br>
-Run the Recogito web-application with the command <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER" </code><br> </p>
+<p align="justify"> Get the container id -> <code> docker ps </code><br>     
+Execute container -> <code> docker exec -it <CONTAINER_ID> bash </code><br>       
+Change directory to recogito2 -> <code> cd home/recogito2 </code><br>
+Activate conda environment created for mapKurator-system -> <code> conda activate mapkurator </code><br>
+Run the Recogito web-application -> <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER" </code><br> </p>
 
 <h4>Step 6: Forward Server Port to Localhost</h4>
 <p align="justify"> To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server.<br> 
