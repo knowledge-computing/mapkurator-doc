@@ -41,7 +41,7 @@ Run elastic search. <br>
 <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
 <code> bin/elasticsearch </code><br><br>
       
-<img src="/docs/assets/3_dockerdb.png" height=600 width=700 alt="Elasticsearch and Postgres Example"><br>      
+<img src="/docs/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example"><br>      
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
 Get the container id with <code>docker ps</code><br>     
