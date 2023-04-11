@@ -1,6 +1,6 @@
 
 <body>
-<p align = "justify"> Mapkurator now has its very own docker image! It can be used with the <a href="https://github.com/pelagios/recogito2">Recogito</a> software by Pelagios. To do so, first pull the <a href="https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags">docker image</a> with the following command -<br> </p> 
+<p align = "justify"> mapkurator now has its very own docker image! It can be used with the <a href="https://github.com/pelagios/recogito2">Recogito</a> software by Pelagios. To do so, first pull the <a href="https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags">docker image</a> with the following command -<br> </p> 
 
 <code> docker pull knowledgecomputing/mapkurator_recogito_2023:latest </code>
  
@@ -9,10 +9,8 @@
 The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.<br>
 </p>
 <h3> Section 1: Docker Container on a Remote Server </h3>     
-<p align="justify"> If you want to run the docker container on a remote server, but view the website for recogito on your local machine follow the steps below -<br> 
-For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br>     
-The steps below assume that you are working with a simple bash terminal.<br>    
-The docker image requires two bash terminals to run the MapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser.<br></p>
+<p align="justify"> To run the docker container on a remote server, and view the website for recogito on your local machine follow the steps below. For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br></p>     
+<p align="justify"> The steps below assume that you are working with a simple bash terminal. The docker image requires two bash terminals to run the mapKurator-Recogito integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application from where mapKurator may be accessed. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web application on the local browser.<br></p>
 You can follow the tutorial below, and use the commands shown in this document.<br>
 <a href="https://www.youtube.com/watch?v=JLMbpiywVxQ](https://youtu.be/WYKBsvrISoE">Tutorial: mapKurator Recogito Docker Image Installation</a>
 <h4> Step 1: Connect to Remote Server </h4> 
@@ -22,7 +20,7 @@ Connect to 2 bash terminals.<br><br>
  
 <h4> Step 2: Run New Docker Container </h4> 
 If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>     
-<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br><br> 
+<code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> 
 <img src="assets/2_docker.png" height=400 width=550 alt="Docker Run Example">      
       
 <h4> Step 3: Run Existing Docker Container </h4>
