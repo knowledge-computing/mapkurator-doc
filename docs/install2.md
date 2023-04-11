@@ -64,7 +64,7 @@ Open a new connection to the remote server using the following command.<br>
       
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-<p align="justify">You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br></p>
+<p align="justify">You can login with the test user with details as <b>username:</b> Test2, <b>password:</b> Test123 or create a new user as well.<br></p>
 <img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
@@ -89,13 +89,14 @@ Follow steps 1 through 2-4 in section 1. The website should be visible at - <cod
 <p align="justify">Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
 Follow steps 1 through 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
+
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-<p align="justify">You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br></p>
+<p align="justify">You can login with the test user with details as <b>username:</b> Test2, <b>password:</b> Test123 or create a new user as well.<br></p>
 <img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
- 
+
 <h3 id="errors"> 
 <a href="#/docs/how-to-use-2?id=errors" data-id="errors" class="anchor">
  <span>
