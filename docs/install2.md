@@ -12,8 +12,9 @@ The setup instructions for section 1 have been thoroughly tested. If you opt for
 <p align="justify"> The steps below assume that you are working with a simple bash terminal. The docker image requires two bash terminals to run the mapKurator-Recogito integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application from where mapKurator may be accessed. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web application on the local browser.<br></p>
 You can follow the video tutorial below, and use the commands shown in this document.<br>
 <a href="https://youtu.be/WYKBsvrISoE">Tutorial: mapKurator Recogito Docker Image Installation</a>
+ 
 <h4> Step 1: Connect to Remote Server </h4> 
-<p align="justify"> Connect to 2 bash terminals.<br>
+<p align="justify"> Connect to 2 bash terminals. One is used by step 4 and the other is used by step 5.<br>
 <code> ssh USER@SERVER </code><br></p>               
 <img src="_media/assets/1_ssh.png" height=400 width=550 alt="SSH Example">
  
@@ -61,14 +62,13 @@ Open a new connection to the remote server using the following command.<br>
 <h4> Linux OS </h4>
  <p align="justify">Run the docker container with the following command -<br>
 <code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br> 
-The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
+Follow steps 1 through 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
 <h4> Windows OS </h4> 
 <p align="justify">You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.</p>     
-
 <p align="justify">Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
- The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
+Follow steps 1 through 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
 <p align="justify">You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br></p>
@@ -77,4 +77,10 @@ The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
  
 <h3 id="Common Installation Errors">Common Installation Errors</h3>
+<ol>
+ <li></li> Check that you started the "mapkurator" conda environment with <code> conda activate mapkurator </code>
+ <li></li> Check that your elastic search instance is running properly, go to Step 4 in Section 1.
+ <li></li> Check that you are in the recogito2 directory before running the sbt command. 
+ 
+ </ol>
 </body>
