@@ -15,18 +15,18 @@ You can follow the video tutorial below, and use the commands shown in this docu
 <h4> Step 1: Connect to Remote Server </h4> 
 <p align="justify"> Connect to 2 bash terminals.<br>
 <code> ssh USER@SERVER </code><br></p>               
-<img src="assets/1_ssh.png" height=400 width=550 alt="SSH Example">
+<img src="_media/assets/1_ssh.png" height=400 width=550 alt="SSH Example">
  
 <h4> Step 2: Run New Docker Container </h4> 
 <p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br></p>     
 <code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> 
-<img src="assets/2_docker.png" height=400 width=550 alt="Docker Run Example">      
+<img src="_media/assets/2_docker.png" height=400 width=550 alt="Docker Run Example">      
       
 <h4> Step 3: Run Existing Docker Container </h4>
 If you are already inside your docker container after following step 2, please skip to step 4.<br>     
 Get the container id <br> 
 <code>docker ps</code><br><br>     
-<img src="assets/4_dockerps.png" height=70 width=400 alt="Docker ps example"><br>     
+<img src="_media/assets/4_dockerps.png" height=70 width=400 alt="Docker ps example"><br>     
 Start container<br>
 <code> docker start -i CONTAINER_ID </code><br>
  
@@ -36,7 +36,7 @@ Switch user to elasticuser with command -> <code> sudo su elasticuser </code><br
 Run elastic search. <br>      
 <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
 <code> bin/elasticsearch </code><br><br>
-<img src="assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
+<img src="_media/assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
 Get the container id with <code> docker ps </code><br>     
@@ -52,11 +52,11 @@ Open a new connection to the remote server using the following command.<br>
 <code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br>
       
 You should be able to see the following page in the browser.<br>    
-<img src="assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+<img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
 You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
-<img src="assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+<img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 You will be redirected to the screen below.<br><br> 
-<img src="assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+<img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
  
 <h3> Section 2: Docker Container on Local Machine </h3>     
 If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
@@ -73,11 +73,11 @@ Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
 The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br>     
 You should be able to see the following page in the browser.<br>    
-<img src="assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+<img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
 You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
-<img src="assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+<img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 You will be redirected to the screen below.<br><br> 
-<img src="assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+<img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
 
 <h3>Common Errors During Installation</h3>
 </body>
