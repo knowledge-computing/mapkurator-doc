@@ -115,7 +115,7 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
  <li>Check that you are in the recogito2 directory before running the sbt command.<br>
  <img src="_media/assets/install2/error3.png" height=250 width=400 alt="Error message when recogito2 is not the current working directory"><br> 
  </li>
- <li>Use the command <code>sbt stopProd</code> if you get the error message "This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook. Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
+ <li>Use the command <code>sbt stopProd</code> if you get the error message "This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
  </li>
  
  </ol>
