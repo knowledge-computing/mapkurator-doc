@@ -13,7 +13,8 @@ The setup instructions for section 1 have been thoroughly tested. If you opt for
 For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br>     
 The steps below assume that you are working with a simple bash terminal.<br>    
 The docker image requires two bash terminals to run the MapKurator-Recogito Integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web-application on the local browser.<br></p>
- 
+You can follow the tutorial below, and use the commands shown in this document.<br>
+<a href="https://www.youtube.com/watch?v=JLMbpiywVxQ](https://youtu.be/WYKBsvrISoE">Tutorial: mapKurator Recogito Docker Image Installation</a>
 <h4> Step 1: Connect to Remote Server </h4> 
 <code>ssh USER@SERVER</code><br>     
 Connect to 2 bash terminals.<br><br>           
@@ -59,9 +60,7 @@ You can login with the test user with details as <b>username:Test2, <b>password:
 <img src="assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 You will be redirected to the screen below.<br><br> 
 <img src="assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
-</body> 
-{% include install2video.html id="WYKBsvrISoE" %}
-<body> 
+ 
 <h3> Section 2: Docker Container on Local Machine </h3>     
 If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
 
