@@ -48,34 +48,33 @@ Run the Recogito web-application -> <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON
 Open a new connection to the remote server using the following command.<br>    
  <code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br> </p>
       
-You should be able to see the following page in the browser.<br>    
+<p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
+<p align="justify">You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br></p>
 <img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
-You will be redirected to the screen below.<br><br> 
+<p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
  
 <h3 id="Section 2: Docker Container on Local Machine"> Section 2: Docker Container on Local Machine </h3>     
-If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
-Ensure that the local machine has a GPU setup that is compatible with cuda11.3.
+<p align="justify">If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below. Ensure that the local machine has a GPU setup that is compatible with cuda11.3.</p>
  
 <h4> Linux OS </h4>
-Run the docker container with the following command -<br>
+ <p align="justify">Run the docker container with the following command -<br>
 <code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br> 
-The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br>    
+The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
 <h4> Windows OS </h4> 
-You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.     
+<p align="justify">You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.</p>     
 
-Run the docker container with the following command -<br>
+<p align="justify">Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
-The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br>     
-You should be able to see the following page in the browser.<br>    
+ The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
+<p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
+<p align="justify">You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br></p>
 <img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
-You will be redirected to the screen below.<br><br> 
+<p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
-
+ 
 <h3 id="Common Installation Errors">Common Installation Errors</h3>
 </body>
