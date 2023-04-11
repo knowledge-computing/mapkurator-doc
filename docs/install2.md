@@ -4,7 +4,7 @@
 <code> docker pull knowledgecomputing/mapkurator_recogito_2023:latest </code>
  
 <h3 id="environment-details">
- <a href="#/docs/how-to-use-2?id=environment-details" data-id="environment-details" class="anchor">
+ <a href="#/docs/install2?id=environment-details" data-id="environment-details" class="anchor">
   <span>Environment Details</span>
  </a>
 </h3> 
@@ -14,7 +14,7 @@ The setup instructions for section 1 have been thoroughly tested. If you opt for
 </p>
  
 <h3 id="section1"> 
- <a href="#/docs/how-to-use-2?id=section1" data-id="section1" class="anchor">
+ <a href="#/docs/install2?id=section1" data-id="section1" class="anchor">
   <span>
    Section 1: Docker Container on a Remote Server 
   </span>
@@ -70,7 +70,7 @@ Open a new connection to the remote server using the following command.<br>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
      
 <h3 id="section2"> 
- <a href="#/docs/how-to-use-2?id=section2" data-id="section2" class="anchor">
+ <a href="#/docs/install2?id=section2" data-id="section2" class="anchor">
   <span>
    Section 2: Docker Container on Local Machine 
   </span>
@@ -98,7 +98,7 @@ Follow steps 1 through 2-4 in section 1. The website should be visible at - <cod
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
 
 <h3 id="errors"> 
-<a href="#/docs/how-to-use-2?id=errors" data-id="errors" class="anchor">
+<a href="#/docs/install2?id=errors" data-id="errors" class="anchor">
  <span>
   Common Installation Errors
  </span>
