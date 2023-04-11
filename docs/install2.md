@@ -34,7 +34,7 @@ You can follow the video tutorial below, and use the commands shown in this docu
 <h4> Step 2: Run New Docker Container </h4> 
 <p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>
 Run the docker container with the command shown below.<br></p>
-<div><code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> </div>
+<div><code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> </div>
 <img src="_media/assets/install2/2_docker.png" height=400 width=550 alt="Docker Run Example"> 
  
 <h4> Step 3: Run Existing Docker Container </h4>
@@ -80,14 +80,14 @@ Open a new connection to the remote server using the following command.<br>
 <p align="justify">If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below. Ensure that the local machine has a GPU setup that is compatible with cuda11.3.</p>
  
 <h4> Linux OS </h4>
- <p align="justify">Run the docker container with the following command -<br>
-<code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br> 
+<p align="justify">Run the docker container with the following command -<br>
+<div><code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code></div><br> 
 Follow steps 1 through 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
 <h4> Windows OS </h4> 
 <p align="justify">You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.</p>     
 <p align="justify">Run the docker container with the following command -<br>
-<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
+<div><code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code></div><br> 
 Follow steps 1 through 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
