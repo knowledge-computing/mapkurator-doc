@@ -1,4 +1,3 @@
-
 <body>
 <p align = "justify"> mapkurator now has its very own docker image! It can be used with the <a href="https://github.com/pelagios/recogito2">Recogito</a> software by Pelagios. To do so, first pull the <a href="https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags">docker image</a> with the following command -<br> </p> 
 
@@ -29,7 +28,7 @@ Get the container id <br>
 <code>docker ps</code><br><br>     
 <img src="assets/4_dockerps.png" height=70 width=400 alt="Docker ps example"><br>     
 Start container<br>
-<code>docker start -i CONTAINER_ID</code><br>
+<code> docker start -i CONTAINER_ID </code><br>
  
 <h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
 As root user run the command -> <code> service postgresql start </code><br>  
@@ -40,17 +39,17 @@ Run elastic search. <br>
 <img src="assets/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
-Get the container id with <code>docker ps</code><br>     
-Execute container <code>docker exec -it <CONTAINER_ID> bash</code><br>       
+Get the container id with <code> docker ps </code><br>     
+Execute container <code> docker exec -it <CONTAINER_ID> bash </code><br>       
 Activate conda environment created for mapKurator-system and run the Recogito web-application.<br>    
-<code>conda activate mapkurator</code><br>
-<code>cd home/recogito2</code><br>
-<code>sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER"</code><br>
+<code> conda activate mapkurator </code><br>
+<code> cd home/recogito2 </code><br>
+<code> sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER" </code><br>
 
 <h4>Step 6: Forward Server Port to Localhost</h4>
 To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server.<br> 
 Open a new connection to the remote server using the following command.<br>    
-<code>ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER</code><br>
+<code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br>
       
 You should be able to see the following page in the browser.<br>    
 <img src="assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
@@ -64,8 +63,8 @@ If you want to run the docker container on your local machine, and view the reco
 
 <h3> Linux OS </h3>
 Run the docker container with the following command -<br>
-<code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
-The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br>    
+<code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br> 
+The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br>    
  
 <h3> Windows OS </h3> 
 Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.     
