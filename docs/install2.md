@@ -13,12 +13,12 @@ The setup instructions for section 1 have been thoroughly tested. If you opt for
 You can follow the tutorial below, and use the commands shown in this document.<br>
 <a href="https://www.youtube.com/watch?v=JLMbpiywVxQ](https://youtu.be/WYKBsvrISoE">Tutorial: mapKurator Recogito Docker Image Installation</a>
 <h4> Step 1: Connect to Remote Server </h4> 
-<code>ssh USER@SERVER</code><br>     
-Connect to 2 bash terminals.<br><br>           
+<p align="justify"> Connect to 2 bash terminals.<br>
+<code> ssh USER@SERVER </code><br></p>               
 <img src="assets/1_ssh.png" height=400 width=550 alt="SSH Example">
  
 <h4> Step 2: Run New Docker Container </h4> 
-If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>     
+<p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br></p>     
 <code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> 
 <img src="assets/2_docker.png" height=400 width=550 alt="Docker Run Example">      
       
