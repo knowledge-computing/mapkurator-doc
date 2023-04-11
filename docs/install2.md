@@ -58,8 +58,15 @@ Open a new connection to the remote server using the following command.<br>
 <code>ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER</code><br>
       
 You should be able to see the following page in the browser.<br>    
-<ADD IMAGE>
+<img src="/docs/assets/homepage_.png" height=250 width=400 alt="Homepage"><br>      
 
+You can login with the test user with details as <b>username:Test2, <b>password: Test123 or create a new user as well.<br><br>
+<img src="/docs/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+ 
+You will be redirected to the screen below.<br><br> 
+<img src="/docs/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>      
+
+ 
 <h3> Section 2: Docker Container on Local Machine </h3>     
 If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
 
