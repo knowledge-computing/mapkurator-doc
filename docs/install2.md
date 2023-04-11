@@ -66,9 +66,7 @@ You can login with the test user with details as <b>username:Test2, <b>password:
 You will be redirected to the screen below.<br><br> 
 <img src="/docs/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>      
  
-
-<iframe width="420" height="315" src="https://youtu.be/WYKBsvrISoE"> </iframe>
- 
+{% include install2video.html id="WYKBsvrISoE" %}
 <h3> Section 2: Docker Container on Local Machine </h3>     
 If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
 
