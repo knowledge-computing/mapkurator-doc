@@ -1,5 +1,5 @@
 <body>
-<p align = "justify"> The mapKurator system now has its very own docker image! It can be used with the <a href="https://github.com/pelagios/recogito2">Recogito</a> software by Pelagios. To do so, first pull the <a href="https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags">docker image</a> with the following command -<br> </p> 
+<p align = "justify"> The mapKurator system now has its very own docker image which allows it to be used with the <a href="https://github.com/pelagios/recogito2">Recogito</a>, a software by Pelagios. To try it out, first pull the <a href="https://hub.docker.com/r/knowledgecomputing/mapkurator_recogito_2023/tags">docker image</a> with the following command -<br> </p> 
 
 <code> docker pull knowledgecomputing/mapkurator_recogito_2023:latest </code>
  
