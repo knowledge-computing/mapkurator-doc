@@ -1,11 +1,14 @@
 ### Dataset Card   
-There are three types of data you can feed into recogito to run with  mapkurator.  
+Recogito accepts three types of input data formats. 
+#### File Upload
+You can upload an image file with the extensions .png,.jpg,.jpeg,.tif on the Recogito webapplication. To do so, press the "+New" button on the left side pane and press the "File Upload" option.
 
-#### File
 #### WMTS
+Recogito also supports Web Map Tile Service (WMTS) which is a standard protocol for serving pre-rendered or run-time computed georeferenced map tiles over the Internet.
+To use the WMTS option 
 #### IIIF 
 
-File Upload - test if jp2 image works.   
+File Upload -    
 WMTS  
 IIIF  
 
