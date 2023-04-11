@@ -7,7 +7,7 @@
 <p align = "justify"> This container was created on a remote server with the underlying host OS as Ubuntu 20.04.5 LTS.<br>     
 The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.<br>
 </p>
-<h3> Section 1: Docker Container on a Remote Server </h3>     
+<h3 id="Section 1: Docker Container on a Remote Server"> Section 1: Docker Container on a Remote Server </h3>     
 <p align="justify"> To run the docker container on a remote server, and view the website for recogito on your local machine follow the steps below. For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br></p>     
 <p align="justify"> The steps below assume that you are working with a simple bash terminal. The docker image requires two bash terminals to run the mapKurator-Recogito integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application from where mapKurator may be accessed. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web application on the local browser.<br></p>
 You can follow the video tutorial below, and use the commands shown in this document.<br>
@@ -55,16 +55,17 @@ You can login with the test user with details as <b>username:Test2, <b>password:
 You will be redirected to the screen below.<br><br> 
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
  
-<h3> Section 2: Docker Container on Local Machine </h3>     
+<h3 id="Section 2: Docker Container on Local Machine"> Section 2: Docker Container on Local Machine </h3>     
 If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below.<br>    
-
-<h3> Linux OS </h3>
+Ensure that the local machine has a GPU setup that is compatible with cuda11.3.
+ 
+<h4> Linux OS </h4>
 Run the docker container with the following command -<br>
 <code> docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br> 
 The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br>    
  
-<h3> Windows OS </h3> 
-Set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.     
+<h4> Windows OS </h4> 
+You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.     
 
 Run the docker container with the following command -<br>
 <code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code><br> 
@@ -76,5 +77,5 @@ You can login with the test user with details as <b>username:Test2, <b>password:
 You will be redirected to the screen below.<br><br> 
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
 
-<h3>Common Errors During Installation</h3>
+<h3 id="Common Installation Errors">Common Installation Errors</h3>
 </body>
