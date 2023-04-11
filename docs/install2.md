@@ -3,11 +3,24 @@
 
 <code> docker pull knowledgecomputing/mapkurator_recogito_2023:latest </code>
  
-<h3> Environment Details  </h3>  
+<h3 id="environment-details">
+ <a href="#/docs/how-to-use-2?id=environment-details" data-id="environment-details" class="anchor">
+  <span>Environment Details</span>
+ </a>
+</h3> 
+ 
 <p align = "justify"> This container was created on a remote server with the underlying host OS as Ubuntu 20.04.5 LTS.<br>     
 The setup instructions for section 1 have been thoroughly tested. If you opt for setup shown in section 2, there may be some issues which have not been tested.<br>
 </p>
-<h3 id="Section 1: Docker Container on a Remote Server"> Section 1: Docker Container on a Remote Server </h3>     
+ 
+<h3 id="section1"> 
+ <a href="#/docs/how-to-use-2?id=section1" data-id="section1" class="anchor">
+  <span>
+   Section 1: Docker Container on a Remote Server 
+  </span>
+ </a>
+</h3> 
+ 
 <p align="justify"> To run the docker container on a remote server, and view the website for recogito on your local machine follow the steps below. For this you will require two terminals in which the docker container must be run. You  may choose to setup the <a href="https://code.visualstudio.com/docs/devcontainers/tutorial">dev container</a> for VSCode or proceed with simple commandline. If you wish to attach a container to VSCode, please refer to this <a href="https://code.visualstudio.com/docs/devcontainers/attach-container">link</a>.<br></p>     
 <p align="justify"> The steps below assume that you are working with a simple bash terminal. The docker image requires two bash terminals to run the mapKurator-Recogito integrated system successfully. The first instance is required to run Postgres and Elasticsearch used by the Recogito software. The second instance is used to run the Recogito web application from where mapKurator may be accessed. In this tutorial, we will run the docker image on an Ubuntu server. The underlying host machine has Nvidia GPUs and Linux OS 20.04.5 LTS. We will use port forwarding between the docker container, the remote server and the local machine to view the Recogito web application on the local browser.<br></p>
 You can follow the video tutorial below, and use the commands shown in this document.<br>
@@ -55,8 +68,15 @@ Open a new connection to the remote server using the following command.<br>
 <img src="_media/assets/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+     
+<h3 id="section2"> 
+ <a href="#/docs/how-to-use-2?id=section2" data-id="section2" class="anchor">
+  <span>
+   Section 2: Docker Container on Local Machine 
+  </span>
+ </a>
+</h3> 
  
-<h3 id="Section 2: Docker Container on Local Machine"> Section 2: Docker Container on Local Machine </h3>     
 <p align="justify">If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below. Ensure that the local machine has a GPU setup that is compatible with cuda11.3.</p>
  
 <h4> Linux OS </h4>
@@ -76,7 +96,14 @@ Follow steps 1 through 2-4 in section 1. The website should be visible at - <cod
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
  
-<h3 id="Common Installation Errors">Common Installation Errors</h3>
+<h3 id="errors"> 
+<a href="#/docs/how-to-use-2?id=errors" data-id="errors" class="anchor">
+ <span>
+  Common Installation Errors
+ </span>
+</a>
+</h3> 
+ 
 <ol>
  <li></li> Check that you started the "mapkurator" conda environment with <code> conda activate mapkurator </code>
  <li></li> Check that your elastic search instance is running properly, go to Step 4 in Section 1.
