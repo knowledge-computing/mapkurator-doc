@@ -82,13 +82,13 @@ Open a new connection to the remote server using the following command.<br>
 <h4> Linux OS </h4>
 <p align="justify">Run the docker container with the following command -<br>
 <div><code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code></div><br> 
-Follow steps 1 through 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
+Follow steps 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
 <h4> Windows OS </h4> 
 <p align="justify">You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.</p>     
 <p align="justify">Run the docker container with the following command -<br>
 <div><code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023</code></div><br> 
-Follow steps 1 through 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
+Follow steps 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
