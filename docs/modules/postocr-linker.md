@@ -17,7 +17,7 @@ The inputs for this module are geocoordinate converter results in `geojson` form
 
 ##### PostOCR and Entity Linker
 ```
-python3 run.py --output_folder='/home/maplord/mapkurator_output/' --expt_name='57k_maps' --module_geocoord_geojson
+python3 run.py --output_folder='/home/maplord/mapkurator_output/' --expt_name='57k_maps' --module_post_ocr_entity_linking
 ```
 
 where
