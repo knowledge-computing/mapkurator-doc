@@ -6,15 +6,15 @@ The inputs for this module are 1) metadata that stores transformation method and
 
 #### 1) Use run.py 
 ```
-python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  --expt_name='57k_maps' --module_geocoord_geojson
+python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv' --output_folder='/home/maplord/mapkurator_output/' --expt_name='57k_maps' --module_geocoord_geojson
 ```
 
 where
 
-* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ). 
-* `--module_img_geojson`:  turns on the stitching module for this run 
+* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ).
+* `--output_folder`: output directory
 * `--expt_name`: experiment name for running the pipeline
-
+* `--module_geocoord_geojson` turns on the geocoordinate converter module in this run
 
 #### 2) Use convert_geojson_to_geocoord.py
 
