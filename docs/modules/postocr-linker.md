@@ -11,7 +11,7 @@ The inputs for this module are geocoordinate converter results in `geojson` form
 
 #### 1) Use run.py 
 
-##### PostOCR standalone
+##### stand-alone PostOCR 
 
 @min 
 
