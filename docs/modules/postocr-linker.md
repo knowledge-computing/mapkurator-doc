@@ -1,17 +1,29 @@
-## PostOCR
-
+### Description
+#### PostOCR
 @min 
 
-## Entity Linker 
-### Description
-EntityLinker retrieves all the candidate geo-entities in [OpenStreetMap](https://www.openstreetmap.org/) that satisfy two criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. (Geo-coordinates are obtained from Geocoordinate Converter)
+#### Entity Linker
+EntityLinker retrieves all the candidate geo-entities in [OpenStreetMap](https://www.openstreetmap.org/) that satisfy two criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geo-coordinates are obtained from Geocoordinate Converter.
+
+### Index Creation Procedures
+
+To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and [Easticsearch](https://www.elastic.co/elasticsearch/) search engine.
+
+<img width="800px" src="_media/databases.jpg"></br>
+
+Figure shows an outline of tables on Postgres and indicies on Elasticsearch. The details of each component are as follows.
+
+* table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables.
+* schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries.
+* index `osm`: An elasticsearch index of table `all_continents`
+* index `osm-voca`: @min
 
 ### Commands
 The inputs for this module are geocoordinate converter results in `geojson` format.
 
 #### 1) Use run.py 
 
-##### stand-alone PostOCR 
+##### Stand-alone PostOCR 
 
 @min 
 
