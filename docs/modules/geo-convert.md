@@ -28,3 +28,5 @@ python3 stich_output.json --sample_map_path='/home/maplord/maplist_csv/luna_omo_
 * `--sample_map_path`: path to sample map csv, which contains gcps info
 * `--in_geojson_file`: input geojson
 * `--out_geojson_dir`: output path to save the converted geojson
+
+
