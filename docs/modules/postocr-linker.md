@@ -19,7 +19,7 @@ Figure shows an outline of tables on Postgres and indicies on Elasticsearch. The
 * index `osm-voca`: @min
 
 ### Commands
-The inputs for this module are geocoordinate converter results in `geojson` format.
+The inputs for this module are geocoordinate converter results in `GeoJSON` format.
 
 #### 1) Use run.py 
 
@@ -48,6 +48,6 @@ Sample command:
 python3 post_ocr_entity_linker.py --in_geojson_file='{map_level_prediction.geojson}' --out_geojson_dir='{directory_path}' 
 ```
 
-* `--in_geojson_file`: input geojson
-* `--out_geojson_dir`: output path to save the updated geojson
+* `--in_geojson_file`: input GeoJSON
+* `--out_geojson_dir`: output path to save the updated GeoJSON
 

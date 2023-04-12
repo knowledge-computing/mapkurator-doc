@@ -25,7 +25,7 @@ Sample command:
 python3 stich_output.json --sample_map_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv' --in_geojson_file='{map_level_prediction.geojson}' --out_geojson_dir='{directory_path}' 
 ```
 
-* `--sample_map_path`: path to sample map csv, which contains gcps info
-* `--in_geojson_file`: input geojson
-* `--out_geojson_dir`: output path to save the converted geojson
+* `--sample_map_path`: stores the metadata of the input map
+* `--in_geojson_file`: input GeoJSON
+* `--out_geojson_dir`: output path to save the converted GeoJSON
 
