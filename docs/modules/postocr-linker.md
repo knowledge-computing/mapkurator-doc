@@ -13,8 +13,8 @@ To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of 
 
 Figure shows an outline of tables on Postgres and indicies on Elasticsearch. The details of each component are as follows.
 
-* table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables.
-* schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries.
+* table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables
+* schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
 * index `osm`: An elasticsearch index of table `all_continents`
 * index `osm-voca`: @min
 
