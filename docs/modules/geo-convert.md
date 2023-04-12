@@ -6,7 +6,7 @@ The inputs for this module are 1) metadata that stores transformation method and
 
 #### 1) Use run.py 
 ```
-python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv' --output_folder='/home/maplord/mapkurator_output/' --expt_name='57k_maps' --module_geocoord_geojson
+python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv' --expt_name='57k_maps' --module_geocoord_geojson
 ```
 
 where

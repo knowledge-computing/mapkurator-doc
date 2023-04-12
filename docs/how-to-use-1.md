@@ -59,15 +59,13 @@ python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metada
 Example for running the **GeocoordinateConverter** module
 ```
 python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
-                --output_folder='/home/maplord/mapkurator_output/'
                 --expt_name='57k_maps' 
                 --module_geocoord_geojson
 ```
 
 Example for running the **PostOCR & EntityLinker** module
 ```
-python3 run.py  --output_folder='/home/maplord/mapkurator_output/'
-                --expt_name='57k_maps' 
+python3 run.py  --expt_name='57k_maps' 
                 --module_post_ocr_entity_linking
 ```
 
