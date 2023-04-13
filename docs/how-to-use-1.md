@@ -71,5 +71,7 @@ python3 run.py  --expt_name='57k_maps'
 
 Example for running the stand-alone **PostOCR** module
 ```
-@min
+python3 run.py --expt_name='57k_maps' 
+               --module_post_ocr_entity_linking 
+               --module_post_ocr_only
 ```
