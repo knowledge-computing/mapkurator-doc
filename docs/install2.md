@@ -64,7 +64,7 @@ Open a new connection to the remote server using the following command.<br>
       
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-<p align="justify">You can login with the test user with details as <b>username:</b> Test2, <b>password:</b> Test123 or create a new user as well.<br></p>
+<p align="justify">You can create a new user.<br></p>
 <img src="_media/assets/install2/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/install2/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
@@ -92,7 +92,7 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
-<p align="justify">You can login with the test user with details as <b>username:</b> Test2, <b>password:</b> Test123 or create a new user as well.<br></p>
+<p align="justify">You can create a new user.<br></p>
 <img src="_media/assets/install2/6_login.png" height=250 width=400 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/install2/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
