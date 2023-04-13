@@ -1,6 +1,4 @@
 
-@yijun 
-
 ### Description 
 
 The mapKurator system provides two state-of-the-art approaches for spotting text instances on scaned historical maps. Both approaches, <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a> and Spotter-v2, are built upon <a href="https://github.com/fundamentalvision/Deformable-DETR" target="_blank">Deformable-DETR</a>.
@@ -8,18 +6,17 @@ The mapKurator system provides two state-of-the-art approaches for spotting text
 ### Training Processs
 
 - Training Datasets
-  - Synthetic datasets: TBD 
-    - We select 40k text-free background images from <a href="https://cocodataset.org/#home" target="_blank">COCO</a> and use them to generate synthetic text images. <b>Code:</b> <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a>; <b>Dataset:</b> TBD;
-    - We propose an approach to generate synthetic maps that mimic the text (e.g., font, spacing, orientation) and background styles in the real historical maps. <b>Code:</b> TBD; <b>Dataset:</b> TBD;
-    - The synthetic datasets are in English, Arabic, Russian, and Chinese. We use these datasets for training multilingual text spotters.
+  - Synthetic datasets:  
+    - <b>SynthText:</b> We select 40k text-free background images from <a href="https://cocodataset.org/#home" target="_blank">COCO</a> and use them to generate synthetic text images (see the left image). <b>Code:</b> <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a>; <b>Dataset:</b> TBD.
+    - <b>SynMap:</b> We propose an approach to generate synthetic maps that mimic the text (e.g., font, spacing, orientation) and background styles in the real historical maps (see the right image). <b>Code:</b> TBD; <b>Dataset:</b> TBD.
+    - The synthetic datasets are in English, Arabic, Russian, and Chinese. We use these datasets for training multilingual text spotters (see <a href="https://knowledge-computing.github.io/mapkurator-doc/#/docs/multilingual" target="_blank">Multilingual Spotting</a>).
   - Human Annotations: TBD
 
-<img width="880" alt="image" src="../../_media/syntext_example.jpg">
-<img width="880" alt="image" src="../../_media/synmap_example.jpg">    
+<img width="880" alt="image" src="_media/syn_image_example.jpg">
 
 - Text Spotters
-  - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>
-  - Spotter-v2: The appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection and recognition performance. Code: TBD.
+  - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>: A state-of-the-art text spotting model, originally on scene images, using <a href="https://arxiv.org/abs/2010.04159" target="_blank">Deformable Transformers</a>.
+  - Spotter-v2: We propose a new appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection and recognition performance. Code: TBD.
 
 - Training Process
   - Pretrain: We train the TESTR and Spotter-v2 with the synthetic datasets.
@@ -60,11 +57,10 @@ where
 If you do not have a metadata csv file, or wish to specify the input path of image directly, you can use `tools/inference.py` in the model folder (i.e., text_spotting_model_dir). 
 
 ```
-CUDA_VISIBLE_DEVICES={gpu_id} python tools/inference.py 
-                                  --config-file ./spotter-v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
-                                  --output_json 
-                                  --input ./test_images
-                                  --output ./output
+python tools/inference.py --config-file ./spotter-v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
+                          --output_json 
+                          --input ./test_images
+                          --output ./output
 
 ```
 where
@@ -73,4 +69,4 @@ where
 * `--output_json` indicates the output file format is JSON
 * `--input` is the input image directory
 * `--output` is the output file directory
-
+* You can set GPU with `CUDA_VISIBLE_DEVICES={gpu_id}`, default gpu_id=0
