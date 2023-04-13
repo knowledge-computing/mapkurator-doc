@@ -4,7 +4,7 @@ PostOCR helps to verify the output and correct misspelled words from PatchTextSp
 
 #### Entity Linker
 EntityLinker links text labels to the corresponding geo-entities in external knowledge bases (e.g., OpenStreetMap) to enable advanced search queries on scanned maps.
-In the current version of the mapKurator, EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e., output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geo-coordinates are obtained from Geocoordinate Converter.
+In the current version of the mapKurator, EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e., output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geocoordinates are obtained from Geocoordinate Converter.
 
 ### Index Creation Procedures
 
@@ -12,7 +12,7 @@ To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of 
 
 <img width="800px" src="_media/databases.jpg"></br>
 
-Figure shows an outline of tables on Postgres and indicies on Elasticsearch. The details of each component are as follows.
+Figure shows an outline of tables on Postgres and indices on Elasticsearch. The details of each component are as follows.
 
 * table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables
 * schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
