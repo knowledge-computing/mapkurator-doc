@@ -28,7 +28,7 @@ optional arguments:
   --print_command
   ```
 
- @jina @min @leeje 
+@min @leeje 
 Provide sample commands to run each module
 
 Example for running the **cropping** module
@@ -51,7 +51,25 @@ python run.py --module_text_spotting
 
 Example for running the **PatchtoMapMerging** module
 ```
-python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
+python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
                 --expt_name='57k_maps' 
                 --module_img_geojson
+```
+
+Example for running the **GeocoordinateConverter** module
+```
+python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
+                --expt_name='57k_maps' 
+                --module_geocoord_geojson
+```
+
+Example for running the **PostOCR & EntityLinker** module
+```
+python3 run.py  --expt_name='57k_maps' 
+                --module_post_ocr_entity_linking
+```
+
+Example for running the stand-alone **PostOCR** module
+```
+@min
 ```
