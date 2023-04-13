@@ -1,13 +1,13 @@
 ### Description
 #### PostOCR
-@min 
+PostOCR helps to verify the output and correct misspelled words from PatchTextSpotter using the [OpenStreetMap](https://www.openstreetmap.org/) dictionary. PostOCR module finds words' candidates using [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from [Elasticsearch](https://www.elastic.co/elasticsearch/), which contains the place name attribute from the OpenStreetMap dictionary. Once PostOCR module identifies words' candidates, the module picks one candidate by the word popularity from the dictionary.
 
 #### Entity Linker
-EntityLinker retrieves the candidate geo-entities in [OpenStreetMap](https://www.openstreetmap.org/) that satisfy two criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geo-coordinates are obtained from Geocoordinate Converter.
+EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geo-coordinates are obtained from Geocoordinate Converter.
 
 ### Index Creation Procedures
 
-To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and [Easticsearch](https://www.elastic.co/elasticsearch/) search engine.
+To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and Elasticsearch search engine.
 
 <img width="800px" src="_media/databases.jpg"></br>
 
@@ -15,8 +15,8 @@ Figure shows an outline of tables on Postgres and indicies on Elasticsearch. The
 
 * table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables
 * schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
-* index `osm`: An elasticsearch index of table `all_continents`
-* index `osm-voca`: @min
+* index `osm`: An Elasticsearch index of table `all_continents`
+* index `osm-voca`: An Elasticsearch index which contains place name attributes and its' popularity from the index `osm`
 
 ### Commands
 The inputs for this module are geocoordinate converter results in `GeoJSON` format.
@@ -25,11 +25,22 @@ The inputs for this module are geocoordinate converter results in `GeoJSON` form
 
 ##### Stand-alone PostOCR 
 
-@min 
+Although the map image does not have Geo-coordinate, you can run stand-alone postOCR module.  
+
+```
+python3 run.py --output_folder='data/postocr_only' --expt_name='57k_maps' --module_post_ocr_entity_linking --module_post_ocr_only
+```
+
+where
+
+* `--output_folder`: output directory
+* `--expt_name`: experiment name for running the pipeline
+* `--module_post_ocr_entity_linking`: turns on the postOCR and entity linking module in this run
+* `--module_post_ocr_only`: turns on stand-alone postOCR module in this run
 
 ##### PostOCR and Entity Linker
 ```
-python3 run.py --expt_name='57k_maps' --module_post_ocr_entity_linking
+python3 run.py --output_folder='data/postocr_entity_link' --expt_name='57k_maps' --module_post_ocr_entity_linking
 ```
 
 where
