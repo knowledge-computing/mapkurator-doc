@@ -2,27 +2,15 @@
 
 ### Description 
 
-As historical maps are written in multiple languages, extracting multilingual text from scanned maps could be valuable information for unlocking the rich historical and cultural information in historical maps with multilingual text. 
+Historical maps contain valuable information for unlocking the rich historical and cultural information with multiple languages. 
 
-The mapKurator system provides multilingual text spotting on scanned historical maps with two state-of-the-art approaches.(<a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a> and Spotter-v2) 
+The mapKurator system provides multilingual text spotting on scanned historical maps with two state-of-the-art approaches.(<a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a> and <a href="https://knowledge-computing.github.io/mapkurator-doc/#/docs/modules/spot" target="_blank"> Spotter-v2</a>) 
 
-### Supported Language
+### Supported Languages
 English, Russian, Arabic, Chinese, Japanese
 
 
-### Training Datasets
-- Synthetic datasets:
-  Using two approaches to synthesize text-free images with text, we generated synthetic datasets in English, Russian, Arabic, Chinese, and Japanese.  
-
-  - SynthText datasets :
-    - <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a>; <b>Dataset:</b> TBD;
-
-  - Synmap datasets :
-   - <b>Code:</b> TBD; <b>Dataset:</b> TBD;
-
-### Training Process
-
-- Training Process
-  - Train: We train the TESTR and Spotter-v2 with the synthetic datasets.
+### Training Datasets and Training Process
+- Training Datasets and training Process are described in <a href="https://knowledge-computing.github.io/mapkurator-doc/#/docs/modules/spot" target="_blank">here</a> 
 
   
