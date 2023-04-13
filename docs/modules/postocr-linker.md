@@ -3,7 +3,8 @@
 PostOCR helps to verify the output and correct misspelled words from PatchTextSpotter using the [OpenStreetMap](https://www.openstreetmap.org/) dictionary. PostOCR module finds words' candidates using [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from [Elasticsearch](https://www.elastic.co/elasticsearch/), which contains the place name attribute from the OpenStreetMap dictionary. Once PostOCR module identifies words' candidates, the module picks one candidate by the word popularity from the dictionary.
 
 #### Entity Linker
-EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geo-coordinates are obtained from Geocoordinate Converter.
+EntityLinker links text labels to the corresponding geo-entities in external knowledge bases (e.g., OpenStreetMap) to enable advanced search queries on scanned maps.
+In the current version of the mapKurator, EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e., output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geo-coordinates are obtained from Geocoordinate Converter.
 
 ### Index Creation Procedures
 
@@ -28,24 +29,22 @@ The inputs for this module are geocoordinate converter results in `GeoJSON` form
 Although the map image does not have Geo-coordinate, you can run stand-alone postOCR module.  
 
 ```
-python3 run.py --output_folder='data/postocr_only' --expt_name='57k_maps' --module_post_ocr_entity_linking --module_post_ocr_only
+python3 run.py --expt_name='57k_maps' --module_post_ocr_entity_linking --module_post_ocr_only
 ```
 
 where
 
-* `--output_folder`: output directory
 * `--expt_name`: experiment name for running the pipeline
 * `--module_post_ocr_entity_linking`: turns on the postOCR and entity linking module in this run
 * `--module_post_ocr_only`: turns on stand-alone postOCR module in this run
 
 ##### PostOCR and Entity Linker
 ```
-python3 run.py --output_folder='data/postocr_entity_link' --expt_name='57k_maps' --module_post_ocr_entity_linking
+python3 run.py --expt_name='57k_maps' --module_post_ocr_entity_linking
 ```
 
 where
 
-* `--output_folder`: output directory
 * `--expt_name`: experiment name for running the pipeline
 * `--module_post_ocr_entity_linking`: turns on the post ocr and entity linking module in this run
 
