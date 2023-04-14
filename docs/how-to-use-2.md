@@ -1,7 +1,7 @@
 <body>
 <h3> Dataset Card </h3>   
  <p align="justify">Recogito accepts three types of input data formats.</p> 
-<h3> File Upload </h4>
+<h4> File Upload </h4>
 <p align="justify">You can upload an image file with the extensions .png,.jpg,.jpeg,.tif on the Recogito webapplication. To do so, click the "+New" button on the left side pane and click the "File Upload" option. To run mapKurator, select the file and click on the "options" dropdown. Then, click on the "mapKurator" drop down option. After the message "processing completed" is displayed, you can click on the image to see the annotated text. A sample image can be found in the folder /home/mapKurator-test-images in the docker image. For more info, check out this quick walkthrough <a href="https://youtu.be/QgheuJ6yyF8">tutorial</a>. </p> 
 
 <h4>IIIF</h4>  
