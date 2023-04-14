@@ -33,4 +33,6 @@ val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py
 //spotter testr command
 val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_testr/TESTR/ --spotter_model=testr --spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
 </code>
+ 
+ To learn more about the integration code refer to the file /home/mapkurator-system/recogito_integration/README.md in the docker image. 
 </p>
