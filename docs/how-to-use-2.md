@@ -49,7 +49,7 @@ val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py
 //spotter testr command
 //val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_testr/TESTR/ --spotter_model=testr --spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
 </code><br>
-  First, comment out the spotter_v2 code and then uncomment the spotter_testr code as shown below. This will need to be done in three places for all three input methods of recogito.<br>
+  First, comment out the spotter_v2 code and then uncomment the spotter_testr code as shown below. This will need to be done in three places for all three input methods of recogito. Save the file when you are done, and re-run recogito with the <code>sbt runProd</code> command. <br>
 <code>//spotter v2 command
 //val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_v2/PALEJUN/ --spotter_model=spotter_v2 --spotter_config=/home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
 
