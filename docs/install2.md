@@ -85,6 +85,7 @@ Run the docker container with the following command
 ```
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
 ```
+ 
 Follow steps 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
 <h4> Windows OS </h4> 
