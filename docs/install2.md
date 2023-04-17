@@ -29,13 +29,13 @@ You can follow the video tutorial below, and use the commands shown in this docu
 <h4> Step 1: Connect to Remote Server </h4> 
 <p align="justify"> Connect to 2 bash terminals. One is used by step 4 and the other is used by step 5.<br>
 <code> ssh USER@SERVER </code><br></p>               
-<img src="_media/assets/install2/1_ssh.png" height=400 alt="SSH Example">
+<img src="_media/assets/install2/1_ssh.png" width=500 alt="SSH Example">
  
 <h4> Step 2: Run New Docker Container </h4> 
 <p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>
 Run the docker container with the command shown below.<br></p>
 <div><code>docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 </code><br><br> </div>
-<img src="_media/assets/install2/2_docker.png" height=400 alt="Docker Run Example"> 
+<img src="_media/assets/install2/2_docker.png" width=500 alt="Docker Run Example"> 
  
 <h4> Step 3: Run Existing Docker Container </h4>
 <p align="justify"> If you are already inside your docker container after following step 2, please skip to step 4.<br>     
@@ -91,11 +91,11 @@ Follow steps 2-4 in section 1. The website should be visible at - <code> localho
 Follow steps 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
-<img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+<img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
 <p align="justify">You can create a new user.<br></p>
-<img src="_media/assets/install2/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+<img src="_media/assets/install2/6_login.png" width=700 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
-<img src="_media/assets/install2/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+<img src="_media/assets/install2/7_exampleimgs.png" width=700 alt="User Homepage"><br>   
 
 <h3 id="errors"> 
 <a href="#/docs/install2?id=errors" data-id="errors" class="anchor">
