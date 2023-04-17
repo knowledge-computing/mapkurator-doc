@@ -40,7 +40,7 @@ Run the docker container with the command shown below.<br></p>
 <h4> Step 3: Run Existing Docker Container </h4>
 <p align="justify"> If you are already inside your docker container after following step 2, please skip to step 4.<br>     
 Otherwise, get the container id -> <code> docker ps </code><br></p>  
-<img src="_media/assets/install2/4_dockerps.png" height=70 width=400 alt="Docker ps example">     
+<img src="_media/assets/install2/4_dockerps.png" width=700 alt="Docker ps example">     
 <p align="justify">Start the container -> <code> docker start -i CONTAINER_ID </code><br></p>
  
 <h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
@@ -48,7 +48,7 @@ Otherwise, get the container id -> <code> docker ps </code><br></p>
 Switch user to elasticuser -> <code> sudo su elasticuser </code><br>  
 Switch directory to elasticsearch -> <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
 Run elasticsearch -> <code> bin/elasticsearch </code><br><br> </p>
-<img src="_media/assets/install2/3_dockerdbedit.png" height=200 width=600 alt="Elasticsearch and Postgres Example">    
+<img src="_media/assets/install2/3_dockerdbedit.png" width=700 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
 <p align="justify"> Get the container id -> <code> docker ps </code><br>     
@@ -63,11 +63,11 @@ Open a new connection to the remote server using the following command.<br>
  <code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br> </p>
       
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
-<img src="_media/assets/install2/homepage_.png" height=250 width=400 alt="Homepage"><br>      
+<img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
 <p align="justify">You can create a new user.<br></p>
-<img src="_media/assets/install2/6_login.png" height=250 width=400 alt="Loginpage"><br>     
+<img src="_media/assets/install2/6_login.png"  width=700 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
-<img src="_media/assets/install2/7_exampleimgs.png" height=250 width=400 alt="User Homepage"><br>   
+<img src="_media/assets/install2/7_exampleimgs.png" width=700 alt="User Homepage"><br>   
      
 <h3 id="section2"> 
  <a href="#/docs/install2?id=section2" data-id="section2" class="anchor">
