@@ -80,9 +80,10 @@ Open a new connection to the remote server using the following command.<br>
 <p align="justify">If you want to run the docker container on your local machine, and view the recogito website on the local port of your choosing follow the steps below. Ensure that the local machine has a GPU setup that is compatible with cuda11.3.</p>
  
 <h4> Linux OS </h4>
-Run the docker container with the following command
  
-```
+Run the docker container with the following command
+
+ ```
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
 ```
  
