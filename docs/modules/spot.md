@@ -12,7 +12,9 @@ The mapKurator system provides two state-of-the-art approaches for spotting text
     - The synthetic datasets are in English, Arabic, Russian, and Chinese. We use these datasets for training multilingual text spotters (see <a href="https://knowledge-computing.github.io/mapkurator-doc/#/docs/multilingual" target="_blank">Multilingual Spotting</a>).
   - Human Annotations: TBD
 
-<img width="700" alt="image" src="_media/syn_image_example.jpg">
+<p align="center">
+<img width="650" alt="image" src="_media/syn_image_example.jpg">
+</p>
 
 - Text Spotters
   - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>: A state-of-the-art text spotting model, originally on scene images, using <a href="https://arxiv.org/abs/2010.04159" target="_blank">Deformable Transformers</a>.
