@@ -43,13 +43,18 @@ The annotations will appear on the image. Please note: Clicking on the "mapKurat
 <h3> Model Card </h3> 
  <h4> mapKurator Spotting Models </h4>
  <p align="justify"> The docker image presently contains two spotting models, which are <b>spotter_v2</b> and <b>spotter_testr</b>. The default model when the docker image is first run, is the <b>spotter_v2</b> model. You can switch over to the spotter_testr model, by editing the file <b><u>"/home/recogito2/app/transform/mapkurator/MapKuratorService.scala"</b></u>. Search for the phrase, "//spotter V2 command", you should find the block of code shown below. <br>
- <code>//spotter v2 command
-val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_v2/PALEJUN/ --spotter_model=spotter_v2 --spotter_config=/home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
 
-//spotter testr command
-//val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_testr/TESTR/ --spotter_model=testr --spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
-</code><br>
-  First, comment out the spotter_v2 code and then uncomment the spotter_testr code as shown below. This will need to be done in three places for all three input methods of recogito. Save the file when you are done, and re-run recogito with the <code>sbt runProd</code> command. <br>
+`spotter v2 command`
+```
+val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_v2/PALEJUN/ --spotter_model=spotter_v2 --spotter_config=/home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
+```
+
+`spotter testr command`
+```
+val cli = s"python /home/mapkurator-system/recogito_integration/process_image.py iiif --url=$filename --dst=data/test_imgs/sample_output/ --filename=${part.getId} --text_spotting_model_dir=/home/spotter_testr/TESTR/ --spotter_model=testr --spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml --gpu_id=3" 
+```
+  
+First, comment out the spotter_v2 code and then uncomment the spotter_testr code as shown below. This will need to be done in three places for all three input methods of recogito. Save the file when you are done, and re-run recogito with the <code>sbt runProd</code> command. <br>
  
 `spotter v2 command`
  ```
