@@ -33,11 +33,12 @@ You can follow the video tutorial below, and use the commands shown in this docu
  
 <h4> Step 2: Run New Docker Container </h4> 
 <p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>
-Run the docker container with the command shown below.<br></p>
-```
- docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_REMOTE_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
+Run the docker container with the command shown below.<br></p>    
+      
 
- ```<br>
+ ```
+ docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
+``` 
 <img src="_media/assets/install2/2_docker.png" width=500 alt="Docker Run Example"> 
  
 <h4> Step 3: Run Existing Docker Container </h4>
