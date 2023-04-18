@@ -44,7 +44,7 @@
      <tr>
     <td align="center">
       <a href="https://www.nls.uk/"><img width="250"
-      src="https://stor.artstor.org/stor/fd907285-3302-4fb1-93cb-a3782549f57b_size4"></a> 
+      src="_media/nls.png"></a> 
     </td>
     <td align="center">
       <a href="https://r-dmuch.jp/"><img width="250"
