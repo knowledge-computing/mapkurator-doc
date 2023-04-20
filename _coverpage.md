@@ -1,8 +1,8 @@
 <!-- _coverpage.md -->
 
-![logo](_media/mapkurator-text.png ':size=25%')
+![logo](_media/mapkurator.png ':size=10%')
 
-## Version <medium>1.3</medium>
+# mapKurator <sub><sup>v1.3</sup></sub>
 
 > A Machine Learning tool to process scanned historical maps
 
