@@ -19,9 +19,8 @@ mapKurator is a fully automatic pipeline developed by the **Knowledge Computing 
 
 - **PatchtoMapMerging** merges the patch-level spotting results into map-level. The output polygons can be loaded in QGIS for visualization, and they should be aligned with the *ungeoreferenced* map image. **Note:** JP2 files should be converted to JPEG before loading in QGIS. 
 
+- **PostOCR** aims to verify the output and correct misspelled words from **PatchTextSpotter** using a dictionary created from OpenStreetMap. **PostOCR** identifies a word's candidates using the [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from an elasticsearch index of the OpenStreetMap dictionary, which contains the place name attribute from OpenStreetMap. Then **PostOCR** picks one candidate based on the word's popularity in the OpenStreetMap dictionary.
+
 - **GeocoordinateConverter**  converts the bounding polygons of text labels from the image coordinate system to the geocoordinate system. **Note**: The polygons in both coordinate systems are saved in the output. 
 
-- **PostOCR & EntityLinker** 
-  - **PostOCR** aims to verify the output and correct misspelled words from **PatchTextSpotter** using a dictionary created from OpenStreetMap. **PostOCR** identifies a word's candidates using the [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from an elasticsearch index of the OpenStreetMap dictionary, which contains the place name attribute from OpenStreetMap. Then **PostOCR** picks one candidate based on the word's popularity in the OpenStreetMap dictionary.
-
-  - **EntityLinker** links each map text to all the candidate geo-entities in OpenStreetMap. The entity linking retrieves candidates that satisfy both criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name 2) the geocoordinates of a geo-entity is within the map boundary. (Geo-coordinates are obtained from GeocoordConverter)
+- **EntityLinker** links each map text to all the candidate geo-entities in OpenStreetMap. The entity linking retrieves candidates that satisfy both criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name 2) the geocoordinates of a geo-entity is within the map boundary. (Geo-coordinates are obtained from GeocoordConverter)
