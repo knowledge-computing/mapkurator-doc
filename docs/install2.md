@@ -34,7 +34,7 @@ You can follow the video tutorial below, and use the commands shown in this docu
 <h4> Step 2: Run New Docker Container </h4> 
 <p align="justify"> If you are running the docker image for the first time, then you will need to run a new container. If you are re-running an already created container please skip to Step 3.<br>
 Run the docker container with the command shown below.<br></p>    
-      
+     
 
  ```
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
@@ -48,15 +48,18 @@ Otherwise, get the container id -> <code> docker ps </code><br></p>
 <p align="justify">Start the container -> <code> docker start -i CONTAINER_ID </code><br></p>
  
 <h4> Step 4: Run Postgres and ElasticSearch in Docker Container </h4> 
-<p align="justify"> As root user start postgres -> <code> service postgresql start </code><br>  
+<p align="justify"> On first instance of remote server, inside the docker container run the following commands.<br>
+As root user start postgres -> <code> service postgresql start </code><br>  
 Switch user to elasticuser -> <code> sudo su elasticuser </code><br>  
 Switch directory to elasticsearch -> <code> cd /home/elasticuser/elasticsearch-5.6.5/ </code><br>
 Run elasticsearch -> <code> bin/elasticsearch </code><br><br> </p>
 <img src="_media/assets/install2/3_dockerdbedit.png" width=700 alt="Elasticsearch and Postgres Example">    
         
 <h4>Step 5: Execute Second Instance of Docker Container</h4>
-<p align="justify"> Get the container id -> <code> docker ps </code><br>     
-Execute container -> <code> docker exec -it CONTAINER_ID bash </code><br>       
+<p align="justify"> On the second instance of remote server, execute the second docker instance as follows.<br>
+Get the container id -> <code> docker ps </code><br>     
+Execute container -> <code> docker exec -it CONTAINER_ID bash </code><br> 
+Use the following commands to start recogito.<br> 
 Change directory to recogito2 -> <code> cd home/recogito2 </code><br>
 Activate conda environment created for mapKurator-system -> <code> conda activate mapkurator </code><br>
 Run the Recogito web-application -> <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER" </code><br> </p>
