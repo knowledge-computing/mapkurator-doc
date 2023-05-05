@@ -4,12 +4,13 @@ GeocoordinateConverter converts predicted bounding polygons (i.e., spotting resu
 ### Visualization 
 If you want to visualize the spotting results in geo-coordinate system with QGIS, you should prepare the 1) GeoJson file in geocoord 2) Georeferenced image  file (GeoTiff) 3) OSM basemap in QGIS. 
 
-<img width="1671" alt="image" src="https://user-images.githubusercontent.com/5383572/236355342-0928704c-41f5-40c3-a42e-543bb33a5e55.png">
-
-
 A GeoTiff file can be generated from a JPEG image, Ground Control Point (GCP) pairs and the georeferencing method (e.g. TPS, Affine and Polynomial). We provide the script for Image-to-GeoTIFF conversion in the [`mapkurator-system`](https://github.com/knowledge-computing/mapkurator-system/blob/main/m1_geotiff/convert_image_to_geotiff.py) repo.  
 
 You can change the `--sample-map-path` which should be a CSV file containing metadata about a list of maps you're interested in. 
+
+A sample visualization is provided in the figure below. 
+
+<img width="1671" alt="image" src="https://user-images.githubusercontent.com/5383572/236355342-0928704c-41f5-40c3-a42e-543bb33a5e55.png">
 
 ### Commands
 The inputs for this module are 1) metadata that stores transformation method and ground control points in `csv` format and 2) map-level results in `geojson` format. You can simply overlay the output json onto map background for visualization on QGIS.
