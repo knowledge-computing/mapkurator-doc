@@ -12,7 +12,8 @@ Steps:<br>
   <li> Wait for the message <b>"processing completed"</b> to appear. </li>
   <li> Click on the image to see the annotated text.</li> 
  </ol>
-A sample image can be found in the folder <b><u>"/home/mapKurator-test-images/"</b></u> in the docker container. For more info, check out this quick walkthrough <a href="https://youtu.be/QgheuJ6yyF8">tutorial</a>.</p> 
+A sample image can be found at <a href="https://drive.google.com/file/d/1lIm9Xh9zNmaZ8gT9H_lrovtHaT97Sb9G/view?usp=sharing">https://drive.google.com/file/d/1lIm9Xh9zNmaZ8gT9H_lrovtHaT97Sb9G/view?usp=sharing </a>
+For more info, check out this quick walkthrough <a href="https://youtu.be/QgheuJ6yyF8">tutorial</a>.</p> 
 
 <h4>IIIF Upload</h4>  
 <p align="justify">IIIF is a set of open standards for delivering high-quality, attributed digital objects online at scale. You can also upload an IIIF file to the webapplication and run recogito.<br>
