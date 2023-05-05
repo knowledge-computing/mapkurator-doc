@@ -67,8 +67,8 @@ Run the Recogito web-application -> <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON
 <h4>Step 6: Forward Server Port to Localhost</h4>
 <p align="justify"> To view the Recogito web-application do local port forwarding with ssh. This allows the localhost to access resources on remote server.<br> 
 Open a new connection to the remote server using the following command.<br>    
- <code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br> </p>
-      
+<code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br> </p>
+Test if your docker port was forwarded to remote server with the command <code> curl http://0.0.0.0:YOUR_PORT_ON_SERVER </code> 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
 <p align="justify">You can create a new user.<br></p>
