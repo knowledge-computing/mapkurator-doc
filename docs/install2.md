@@ -71,7 +71,7 @@ Open a new connection to the remote server using the following command.<br>
 Test if your docker port was forwarded to remote server with the command <code> curl http://0.0.0.0:YOUR_PORT_ON_SERVER </code> 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
-<p align="justify">You can create a new user.<br></p>
+<p align="justify">You can create a new user and then login.<br></p>
 <img src="_media/assets/install2/6_login.png"  width=700 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/install2/7_exampleimgs.png" width=700 alt="User Homepage"><br>   
@@ -107,7 +107,7 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
 
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
-<p align="justify">You can create a new user.<br></p>
+<p align="justify">You can create a new user and then login.<br></p>
 <img src="_media/assets/install2/6_login.png" width=700 alt="Loginpage"><br>     
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/install2/7_exampleimgs.png" width=700 alt="User Homepage"><br>   
