@@ -8,19 +8,19 @@ If you face issues with the cuda installation, please consider using our [docker
 #### Setup Anaconda 
 Setup an anaconda environment by running the following commands.   
     
-Download the latest anaconda setup -    
-```wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh```       
-You may replace the link above with the latest link from [anaconda](https://www.anaconda.com/products/distribution#Downloads).   
-Run the installation file.   
+1. Download the latest anaconda setup -    
+```wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh```
+   You may replace the link above with the latest link from [anaconda](https://www.anaconda.com/products/distribution#Downloads).   
+2. Run the installation file.   
 ```bash Anaconda3-2022.10-Linux-x86_64.sh```       
       
-Create a conda environment to install all software packages required by mapKurator-system.    
+3. Create a conda environment to install all software packages required by mapKurator-system.    
 ```conda create --name mapKurator -y python=3.8```   
-Activate the environment.       
+4. Activate the environment.       
 ```conda activate mapKurator```   
 
 #### Install Required Libraries       
-Install all python packages with the commands below.        
+1. Install all python packages with the commands below.        
 ```python -m pip install numpy==1.21.6```    
 ```python -m pip install opencv-python==4.7```    
 ```python -m pip install pandas==1.4.3 ```    
@@ -29,7 +29,11 @@ Install all python packages with the commands below.
 ```python -m pip install shapely==1.8.2```           
 ```python -m pip install geojson==2.5.0```       
 ```conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge```     
-Install gdal by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
+
+2. Install ```gdal``` by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
+3. Install ```PostgreSQL``` by following the instructions [here](https://www.postgresql.org/download/). Tested version: 14.7
+4. Install ```elasticsearch``` by following the instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html). Tested version: 7.10.1
+5. Install ```logstash``` by following the instructions [here](https://www.elastic.co/guide/en/logstash/current/installing-logstash.html). Tested version: 8.7.0
 
 Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
 
