@@ -134,6 +134,8 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
  </li>
  <li>Use the command <code>sbt stopProd</code> if you get the error message "This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
  </li>
- 
+ <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message below shows up when you scroll down, do the command <code>docker restart CONTAINER_ID</code>.<br>
+ <img src="_media/assets/install2/error4.png" width=700 alt="Error message when multiple elastic search instances may have been run" width=800><br>   
+ </li>
  </ol>
 </body>
