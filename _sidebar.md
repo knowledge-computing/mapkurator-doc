@@ -7,8 +7,9 @@
   - [Image Cropping Module](docs/modules/crop.md)
   - [Patch Text Spotter](docs/modules/spot.md)
   - [Patch to Map Merging](docs/modules/merge.md)
+  - [PostOCR](docs/modules/postocr.md)
   - [Geocoordinate Converter](docs/modules/geo-convert.md)
-  - [PostOCR & EntityLinker](docs/modules/postocr-linker.md)
+  - [Entity Linker](docs/modules/linker.md)
 
 
 - Use Stand-alone mapKurator

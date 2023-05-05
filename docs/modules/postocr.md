@@ -2,10 +2,6 @@
 #### PostOCR
 PostOCR helps to verify the output and correct misspelled words from PatchTextSpotter using the [OpenStreetMap](https://www.openstreetmap.org/) dictionary. PostOCR module finds words' candidates using [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from [Elasticsearch](https://www.elastic.co/elasticsearch/), which contains the place name attribute from the OpenStreetMap dictionary. Once PostOCR module identifies words' candidates, the module picks one candidate by the word popularity from the dictionary.
 
-#### Entity Linker
-EntityLinker links text labels to the corresponding geo-entities in external knowledge bases (e.g., OpenStreetMap) to enable advanced search queries on scanned maps.
-In the current version of the mapKurator, EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e., output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geocoordinates are obtained from Geocoordinate Converter.
-
 ### Index Creation Procedures
 
 To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and Elasticsearch search engine.
