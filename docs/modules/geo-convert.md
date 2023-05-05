@@ -1,6 +1,9 @@
 ### Description
 GeocoordinateConverter converts predicted bounding polygons (i.e., spotting results) from image coordinates to geocoordinates. Module uses [ogr2ogr](https://gdal.org/programs/ogr2ogr.html) from GDAL. Source and target coordinate reference systems are set as [EPSG:4326](https://epsg.io/4326) and [EPSG:3857](https://epsg.io/3857), respectively.
 
+### Visualization 
+If you want to visualize the spotting results in geo-coordinate system with QGIS, you should prepare the 1) GeoJson file in geocoord 2) Georeferenced image  file (GeoTiff) 3) OSM basemap in QGIS. 
+
 ### Commands
 The inputs for this module are 1) metadata that stores transformation method and ground control points in `csv` format and 2) map-level results in `geojson` format. You can simply overlay the output json onto map background for visualization on QGIS.
 
