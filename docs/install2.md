@@ -37,7 +37,7 @@ Run the docker container with the command shown below.<br></p>
      
 
  ```
- docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
+ docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_SERVER:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
 ``` 
 <img src="_media/assets/install2/2_docker.png" width=500 alt="Docker Run Example"> 
  
