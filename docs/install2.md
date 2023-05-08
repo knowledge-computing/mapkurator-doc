@@ -74,20 +74,20 @@ You should see an html page displayed starting and ending as follows -
  
 ```
  ~$ curl http://0.0.0.0:9820
- <!DOCTYPE html>
- <html>
-   <head>
-     <title>..........</title>
-     <meta name="description" content="Semantic Annotation without the pointy brackets. Recogito is an annotation tool for texts and images - not just for Digital Humanities scholars. An initiative of Pelagios Commons.">
-     <meta name="keywords" content="Annotation,Digital Humanities,Linked Data,Text Annotation,Image Annotation,Gazetteers,IIIF,TEI">
+ \<\!DOCTYPE html\>
+\<html\>
+   \<head\>
+     \<title\>..........\</title\>
+     \<meta name="description" content="Semantic Annotation without the pointy brackets. Recogito is an annotation tool for texts and images - not just for Digital Humanities scholars. An initiative of Pelagios Commons."\>
+     \<meta name="keywords" content="Annotation,Digital Humanities,Linked Data,Text Annotation,Image Annotation,Gazetteers,IIIF,TEI"\>
  ..............
     ..........
     .........
     .........
  ..................
- </script>
-   </body>
- </html>
+ \</script\>
+   \</body\>
+ \</html\>
   ```
  
 To check the website on your local browser, go to the browser and type in the url <code>localhost:YOUR_PORT_ON_LOCAL</code> </p>
