@@ -196,7 +196,7 @@ Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [
    ```
   <ol>
    <li> Solution 1: Run command <code>exit</code>-><code>exit</code>->Press the key enter/return->Re-run Step 4</li>
-    <li> Solution 2: Exit from the docker containers, and go back to the remote server. Run the command <code>docker restart CONTAINER_ID</code></li>
+    <li> Solution 2: Exit from the docker containers, and login to the remote server. Run the command <code>docker restart CONTAINER_ID</code>. You can find the container id with the command <code>docker ps</code></li>
   </ol>
  </li>
  <li>
