@@ -66,5 +66,6 @@ To switch the spotting model to <b>spotter_testr</b> use command - <code>bash se
 <li>
 Run the Recogito web-application ->  <code>sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER"</code>
 </li>
+</ul>
 To learn more about the integration code refer to the file /home/mapkurator-system/recogito_integration/README.md in the docker container. 
 </p>
