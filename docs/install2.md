@@ -156,7 +156,7 @@ Run the docker container with the following command
  <li>Check that you are in the recogito2 directory before running the sbt command.<br>
  <img src="_media/assets/install2/error3.png" width=500 alt="Error message when recogito2 is not the current working directory"><br> 
  </li>
- <li>Use the command <code>sbt stopProd</code> if you get the error message as shown. 
+ <li>Use the command <code>sbt stopProd</code> if you get the error message as shown below. 
   If the message persists then run command <code>rm /home/recogito2/target/universal/stage/RUNNING_PID </code>
   <br><br>
   <i>This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required.</i> <br><br>
