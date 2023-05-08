@@ -70,6 +70,26 @@ Run the Recogito web-application -> <code> sbt "runProd -Dhttp.port=YOUR_PORT_ON
 Open a new connection to the remote server using the following command.<br>    
 <code> ssh -L YOUR_PORT_ON_LOCAL:localhost:YOUR_PORT_ON_SERVER USER@SERVER </code><br> 
 Test if your docker port was forwarded to remote server with the command <code> curl http://0.0.0.0:YOUR_PORT_ON_SERVER </code> <br>
+You should see an html page displayed starting and ending as follows - 
+ 
+```
+ ~$ curl http://0.0.0.0:9820
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>..........</title>
+     <meta name="description" content="Semantic Annotation without the pointy brackets. Recogito is an annotation tool for texts and images - not just for Digital Humanities scholars. An initiative of Pelagios Commons.">
+     <meta name="keywords" content="Annotation,Digital Humanities,Linked Data,Text Annotation,Image Annotation,Gazetteers,IIIF,TEI">
+ ..............
+    ..........
+    .........
+    .........
+ ..................
+ </script>
+   </body>
+ </html>
+  ```
+ 
 To check the website on your local browser, go to the browser and type in the url <code>localhost:YOUR_PORT_ON_LOCAL</code> </p>
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
@@ -114,6 +134,29 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
 <p align="justify">You will be redirected to the screen below.<br></p>
 <img src="_media/assets/install2/7_exampleimgs.png" width=700 alt="User Homepage"><br>   
 
+<h3 id="exit"> 
+<a href="#/docs/install2?id=exiting" data-id="exiting" class="anchor">
+ <span>
+  How To Exit 
+ </span>
+</a>
+</h3> 
+<p align="justify">
+ If you reached this section, it is assumed that you've completed the setup upto step 6 and can use mapKurator-Recogito docker image successfully with the recogito webpage.<br> 
+ Terminology<br>
+ Bash 1: Terminal which runs recogito with <code>sbt run..</code> command.<br>
+ Bash 2 : Terminal which runs postgres and elasticsearch.<br>
+ Bash 3 : Terminal with remote server only.<br> 
+ <ul>
+  <li> Exit bash 1 by executing the following commands in order. <br>
+  Press <code>Ctrl+C</code>-> Type command <code>exit</code>-> Type command <code>exit</code>
+  </li>
+  <li> Exit bash 2 by executing the following commands in order. <br>
+  Press <code>Ctrl+C</code>-> Type command <code>exit</code>-> Type command <code>exit</code>-> Type command <code>exit</code>
+  </li>
+  <li> Exit bash 3 by executing the command <code>exit</code></li>
+  </ul>
+ </p>
 <h3 id="errors"> 
 <a href="#/docs/install2?id=errors" data-id="errors" class="anchor">
  <span>
@@ -150,12 +193,21 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
   at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.6.5.jar:5.6.5]
 Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/elasticuser/elasticsearch-5.6.5/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
 
-  
    ```
   <ol>
    <li> Solution 1: Run command <code>exit</code>-><code>exit</code>->Press the key enter/return->Re-run Step 4</li>
-    <li> Solution 2: Exit from the docker containers, and back to the remote server. Run the command <code>docker restart CONTAINER_ID</code></li>
+    <li> Solution 2: Exit from the docker containers, and go back to the remote server. Run the command <code>docker restart CONTAINER_ID</code></li>
   </ol>
  </li>
+ <li>
+  If you get this error in Step 6 for the command <code>curl http://0.0.0.0:YOUR_PORT_ON_SERVER</code> -
+  
+  ```
+  ~$ curl http://0.0.0.0:9820
+  curl: (56) Recv failure: Connection reset by peer
+  ```
+  This means something is wrong with your recogito instance in bash terminal 2. Go back to Step 5, and check if there is an error in running recogito instance. 
+  </li>
+  
  </ol>
 </body>
