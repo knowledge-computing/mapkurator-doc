@@ -162,12 +162,12 @@ Run the docker container with the following command
   <i>This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required.</i> <br><br>
   
   </li>
- <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message below shows-
+ <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message as shown below-
   <br><br><i>
-  2023-05-08 13:45:43,866 main ERROR RollingFileManager (/home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied)
-  ..................
-  ...................
-  ..................
+  2023-05-08 13:45:43,866 main ERROR RollingFileManager (/home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied)<br>
+  ..................<br>
+  ...................<br>
+  ..................<br>
   at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.6.5.jar:5.6.5]
 Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/elasticuser/elasticsearch-5.6.5/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
   </i><br><br>
