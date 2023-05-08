@@ -61,9 +61,9 @@ For more info, check out this quick walkthrough <a href="https://youtu.be/P3xnpe
  You should see the following in the bash terminal <code>(mapkurator)root@3a865d74f518:/home/recogito2#</code>
  </li> 
 <li> 
-To switch the spotting model to <b>spotter_testr</b> use command - <code>bash select.sh SpotterTestr</code></li>
+To switch the spotting model to <b>spotter_testr</b> use command - <code>bash /select.sh SpotterTestr</code></li>
 <li> 
-<b>OR</b> to switch the spotting model to <b>spotter_v2</b> use command - <code>bash select.sh SpotterV2</code></li>
+<b>OR</b> to switch the spotting model to <b>spotter_v2</b> use command - <code>bash /select.sh SpotterV2</code></li>
 </li>
 <li>
 Run the Recogito web-application ->  <code>sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER"</code>
