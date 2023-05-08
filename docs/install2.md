@@ -91,23 +91,23 @@ To check the website on your local browser, go to the browser and type in the ur
  
 <h4> Linux OS </h4>
  
-Run the docker container with the following command
-
- ```
- docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023 
+<p align="justify">Run the docker container with the following command       
+ 
+```
+ docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023    
 ```
  
 Follow steps 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
-<h4> Windows OS </h4> 
+<h4> Windows OS </h4>  
 <p align="justify">You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.</p>     
 Run the docker container with the following command
 
 ```
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023
 ```
-Follow steps 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 
+Follow steps 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
 <p align="justify">You can create a new user and then login.<br></p>
@@ -150,19 +150,17 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
  <li> Check that you started the "mapkurator" conda environment with <code> conda activate mapkurator </code><br>
  <img src="https://user-images.githubusercontent.com/5383572/232579771-7f86b0f5-b85b-4757-b1a9-8a8a8298e273.png" width=700 alt="Error message when conda env is not active"><br>   
  </li>
- 
  <li> Check that your elastic search instance is running properly, go to Step 4 in Section 1.<br>
  <img src="https://user-images.githubusercontent.com/5383572/232580141-2cadc306-322e-49a5-8184-c73c3c8ab51e.png" width=700 alt="Error message when elastic search is not running" width=800><br>   
  </li>
  <li>Check that you are in the recogito2 directory before running the sbt command.<br>
  <img src="_media/assets/install2/error3.png" width=500 alt="Error message when recogito2 is not the current working directory"><br> 
  </li>
- <li>Use the command <code>sbt stopProd</code> if you get the error message as shown -
+ <li>Use the command <code>sbt stopProd</code> if you get the error message as shown. 
   
   ```
   This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
  ```
-  
   If the message persists then run command <code>rm /home/recogito2/target/universal/stage/RUNNING_PID </code>
   </li>
  <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message below shows-
