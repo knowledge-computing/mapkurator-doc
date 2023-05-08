@@ -179,7 +179,7 @@ Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [
  <li>
   If you get this error in Step 6 for the command <code>curl http://0.0.0.0:YOUR_PORT_ON_SERVER</code> -
  <br><br><i>
-  ~$ curl http://0.0.0.0:9820
+  ~$ curl http://0.0.0.0:9820<br>
   curl: (56) Recv failure: Connection reset by peer
   </i><br><br>
   This means something is wrong with your recogito instance in bash terminal 2. Go back to Step 5, and check if there is an error in running recogito instance. 
