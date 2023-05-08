@@ -55,12 +55,16 @@ For more info, check out this quick walkthrough <a href="https://youtu.be/P3xnpe
 
 <h3> Model Card </h3> 
  <h4> mapKurator Spotting Models </h4>
- <p align="justify"> The docker image presently contains two spotting models, which are <b>spotter_v2</b> and <b>spotter_testr</b>. The default model when the docker image is first run, is the <b>spotter_v2</b> model.
+ <p align="justify"> The docker image presently contains two spotting models, which are <b>spotter_v2</b> and <b>spotter_testr</b>. The default model when the docker image is first run, is the <b>spotter_v2</b> model. Following steps show how to switch the spotting modules for recogito.
 <ul>
+<li>If you have a running instance of recogito, then exit from the bash terminal using Ctrl+Z </li> 
 <li> 
 To switch the spotting model to <b>spotter_testr</b> use command - <code>bash select.sh SpotterTestr</code></li>
 <li> 
-To switch the spotting model to <b>spotter_v2</b> use command - <code>bash select.sh SpotterV2</code></li>
+<b>OR</b> to switch the spotting model to <b>spotter_v2</b> use command - <code>bash select.sh SpotterV2</code></li>
+</li>
+<li>
+Run the Recogito web-application ->  <code>sbt "runProd -Dhttp.port=YOUR_PORT_ON_DOCKER"</code>
 </li>
 To learn more about the integration code refer to the file /home/mapkurator-system/recogito_integration/README.md in the docker container. 
 </p>
