@@ -133,10 +133,29 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
  <li>Check that you are in the recogito2 directory before running the sbt command.<br>
  <img src="_media/assets/install2/error3.png" width=500 alt="Error message when recogito2 is not the current working directory"><br> 
  </li>
- <li>Use the command <code>sbt stopProd</code> if you get the error message "This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
- </li>
- <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message below shows up when you scroll down, do the command <code>docker restart CONTAINER_ID</code>.<br>
- <img src="_media/assets/install2/error4.png" width=700 alt="Error message when multiple elastic search instances may have been run" width=800><br>   
+ <li>Use the command <code>sbt stopProd</code> if you get the error message as shown -
+  
+  ```
+  This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
+ ```
+  If the message persists then run command <code>rm /home/recogito2/target/universal/stage/RUNNING_PID </code>
+  </li>
+ <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message below shows-
+ 
+   ```
+  2023-05-08 13:45:43,866 main ERROR RollingFileManager (/home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied)
+  ..................
+  ...................
+  ..................
+  at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.6.5.jar:5.6.5]
+Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/elasticuser/elasticsearch-5.6.5/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+
+  
+   ```
+  <ol>
+   <li> Solution 1: Run command <code>exit</code>-><code>exit</code>->Press the key enter/return->Re-run Step 4</li>
+    <li> Solution 2: Exit from the docker containers, and back to the remote server. Run the command <code>docker restart CONTAINER_ID</code></li>
+  </ol>
  </li>
  </ol>
 </body>
