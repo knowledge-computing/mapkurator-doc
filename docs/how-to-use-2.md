@@ -58,7 +58,7 @@ For more info, check out this quick walkthrough <a href="https://youtu.be/P3xnpe
  <p align="justify"> The docker image presently contains two spotting models, which are <b>spotter_v2</b> and <b>spotter_testr</b>. The default model when the docker image is first run, is the <b>spotter_v2</b> model. Following steps show how to switch the spotting modules for recogito.
 <ul>
 <li>If you have a running instance of recogito, ie the terminal used for Step 5, then exit from the recogito instance using Ctrl+C
- You should see the following in the bash terminal <code>(mapkurator)root@3a865d74f518:/home/recogito2#</code>
+ You should see the following in the bash terminal <code>(mapkurator)root@<CONTAINER_ID>:/home/recogito2#</code>
  </li> 
 <li> 
 To switch the spotting model to <b>spotter_testr</b> use command - <code>bash /select.sh SpotterTestr</code></li>
