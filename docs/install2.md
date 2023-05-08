@@ -91,13 +91,13 @@ To check the website on your local browser, go to the browser and type in the ur
  
 <h4> Linux OS </h4>
  
-<p align="justify">Run the docker container with the following command       
+<p align="justify">Run the docker container with the following command.</p>       
  
 ```
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023    
 ```
  
-Follow steps 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
+<p align="justify">Follow steps 2-4 in section 1. The website should be visible at - <code> localhost:YOUR_PORT_ON_LOCAL </code> <br></p>    
  
 <h4> Windows OS </h4>  
 <p align="justify">You may need to set GPUs to persistent mode. To learn more about setting up a windows machine for running docker please refer to this <a href="https://docs.docker.com/desktop/windows/wsl/">link</a>.</p>     
@@ -107,7 +107,7 @@ Run the docker container with the following command
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023
 ```
 
-Follow steps 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
+<p align="justify">Follow steps 2-4 in section 1. The website should be visible at - <code>localhost:YOUR_PORT_ON_LOCAL</code> <br></p>     
 <p align="justify">You should be able to see the following page in the browser.<br></p>    
 <img src="_media/assets/install2/homepage_.png" width=700 alt="Homepage"><br>      
 <p align="justify">You can create a new user and then login.<br></p>
@@ -157,36 +157,31 @@ Follow steps 2-4 in section 1. The website should be visible at - <code>localhos
  <img src="_media/assets/install2/error3.png" width=500 alt="Error message when recogito2 is not the current working directory"><br> 
  </li>
  <li>Use the command <code>sbt stopProd</code> if you get the error message as shown. 
-  
-  ```
-  This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required. 
- ```
   If the message persists then run command <code>rm /home/recogito2/target/universal/stage/RUNNING_PID </code>
+  <br><br>
+  <i>This application is already running (Or delete /home/recogito2/target/universal/stage/RUNNING_PID file). [INFO] [<DATE><TIME> [Thread-2] [CoordinatedShutdown(akka://sbt-web)] Starting coordinated shutdown from JVM shutdown hook." Also, deleting /home/recogito2/target/universal/stage/RUNNING_PID file may be required.</i> <br><br>
+  
   </li>
  <li>If you get an error message with "FileNotFound Exception" when running elastic search and the message below shows-
- 
-   ```
+  <br><br><i>
   2023-05-08 13:45:43,866 main ERROR RollingFileManager (/home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied) java.io.FileNotFoundException: /home/elasticuser/elasticsearch-5.6.5/logs/elasticsearch.log (Permission denied)
   ..................
   ...................
   ..................
   at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.6.5.jar:5.6.5]
 Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/elasticuser/elasticsearch-5.6.5/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
-   ```
-  
+  </i><br><br>
   <ol>
    <li> Solution 1: Run command <code>exit</code>-><code>exit</code>->Press the key enter/return->Re-run Step 4</li>
     <li> Solution 2: Exit from the docker containers, and login to the remote server. Run the command <code>docker restart CONTAINER_ID</code>. You can find the container id with the command <code>docker ps</code></li>
   </ol>
- </li>
+  </li>
  <li>
   If you get this error in Step 6 for the command <code>curl http://0.0.0.0:YOUR_PORT_ON_SERVER</code> -
-  
-    ```
+ <br><br><i>
   ~$ curl http://0.0.0.0:9820
   curl: (56) Recv failure: Connection reset by peer
-  ```
-  
+  </i><br><br>
   This means something is wrong with your recogito instance in bash terminal 2. Go back to Step 5, and check if there is an error in running recogito instance. 
   </li>
   
