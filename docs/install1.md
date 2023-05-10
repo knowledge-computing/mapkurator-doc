@@ -43,6 +43,7 @@ Setup an anaconda environment by running the following commands.
 ```cd AdelaiDet```      
 ```python setup.py build develop```      
 8. Clone the mapKurator repository from [here](https://github.com/knowledge-computing/mapkurator-system).      
+ 
 Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
 
 #### Index Creation Procedures for PostOCR and Entity Linker Modules
