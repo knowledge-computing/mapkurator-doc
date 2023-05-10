@@ -2,19 +2,6 @@
 #### PostOCR
 PostOCR helps to verify the output and correct misspelled words from PatchTextSpotter using the [OpenStreetMap](https://www.openstreetmap.org/) dictionary. PostOCR module finds words' candidates using [fuzzy query function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html) from [Elasticsearch](https://www.elastic.co/elasticsearch/), which contains the place name attribute from the OpenStreetMap dictionary. Once PostOCR module identifies words' candidates, the module picks one candidate by the word popularity from the dictionary.
 
-### Index Creation Procedures
-
-To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and Elasticsearch search engine.
-
-<img width="800px" src="_media/databases.jpg"></br>
-
-Figure shows an outline of tables on Postgres and indices on Elasticsearch. The details of each component are as follows.
-
-* table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables
-* schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
-* index `osm`: An Elasticsearch index of table `all_continents`
-* index `osm-voca`: An Elasticsearch index which contains place name attributes and its' popularity from the index `osm`
-
 ### Commands
 The inputs for this module are geocoordinate converter results in `GeoJSON` format.
 

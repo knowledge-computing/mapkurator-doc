@@ -18,7 +18,8 @@ optional arguments:
   --module_text_spotting
   --module_img_geojson
   --module_geocoord_geojson
-  --module_post_ocr_entity_linking
+  --module_post_ocr
+  --module_entity_linking
   --spotter_model {abcnet,testr}
                         Select text spotting model option from ["abcnet","testr"]
   --spotter_config SPOTTER_CONFIG
@@ -27,9 +28,6 @@ optional arguments:
                         Name of spotter experiment, if empty using config file name
   --print_command
   ```
-
-@min @leeje 
-Provide sample commands to run each module
 
 Example for running the **cropping** module
 ```
@@ -63,15 +61,8 @@ python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metada
                 --module_geocoord_geojson
 ```
 
-Example for running the **PostOCR & EntityLinker** module
-```
-python3 run.py  --expt_name='57k_maps' 
-                --module_post_ocr_entity_linking
-```
-
 Example for running the stand-alone **PostOCR** module
 ```
 python3 run.py --expt_name='57k_maps' 
-               --module_post_ocr_entity_linking 
-               --module_post_ocr_only
+               --module_post_ocr
 ```

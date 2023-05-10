@@ -2,7 +2,7 @@ The stand-alone mapKurator-system requires that *cuda_11.3* with *cudnn* and *nv
      
 Note that *cuda_11.3* only provided support for *Ubuntu 20.04* and below at the time this document was created. 
 
-### Installing MapKurator on Ubuntu18.04 with cuda_11.3_devel 
+### Installing mapKurator on Ubuntu18.04 with cuda_11.3_devel 
 
 #### Setup Anaconda 
 Setup an anaconda environment by running the following commands.   
@@ -44,6 +44,20 @@ Setup an anaconda environment by running the following commands.
 ```python setup.py build develop```      
 
 Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
+
+#### Index Creation Procedures for PostOCR and Entity Linker Modules
+
+To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and Elasticsearch search engine.
+
+<img width="800px" src="_media/databases.jpg"></br>
+
+Figure shows an outline of tables on Postgres and indices on Elasticsearch. The details of each component are as follows.
+
+* table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables
+* schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
+* index `osm`: An Elasticsearch index of table `all_continents`
+* index `osm-voca`: An Elasticsearch index which contains place name attributes and its' popularity from the index `osm`
+
 
 ### Using mapKurator-Recogito docker image for standalone mapKurator - 
 NOTE: This section is not thoroughly tested.        

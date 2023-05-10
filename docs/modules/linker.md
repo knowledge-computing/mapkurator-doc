@@ -1,3 +1,3 @@
 ### Description
-EntityLinker links text labels to the corresponding geo-entities in external knowledge bases (e.g., OpenStreetMap) to enable advanced search queries on scanned maps.
-In the current version of the mapKurator, EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e., output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of a geo-entity is within the map boundary. Geocoordinates are obtained from Geocoordinate Converter.
+EntityLinker links text labels to the corresponding geo-entities in external knowledge bases (e.g., [OpenStreetMap](https://www.openstreetmap.org/)) to enable advanced search queries on scanned maps.
+In the current version of the mapKurator, EntityLinker retrieves the candidate geo-entities in OpenStreetMap that satisfy two criteria: 1) the suggested word (i.e., output from PostOCR) is a substring of the candidate geo-entity's name and 2) the geocoordinates of text bounding polygon (i.e., output from Geocoordinate Converter) is in the buffer of OpenStreetMap geo-entities.
