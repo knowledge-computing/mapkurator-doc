@@ -42,7 +42,7 @@ Setup an anaconda environment by running the following commands.
 ```git clone https://github.com/aim-uofa/AdelaiDet.git```      
 ```cd AdelaiDet```      
 ```python setup.py build develop```      
-8. Clone the mapKurator repository from [here](https://github.com/knowledge-computing/mapkurator-system).      
+8. Clone the mapKurator repository with ``` git clone https://github.com/knowledge-computing/mapkurator-system```.      
  
 Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
 
@@ -71,16 +71,4 @@ Then run the container with -
 docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  knowledgecomputing/mapkurator_recogito_2023
 ```  
 
-Then refer to this how-to-use [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter_v2 and spotter_testr. The following values can be used as sample spotting module arguments mentioned in the how-to-use section. 
-```
---text_spotting_model_dir=/home/spotter_v2/PALEJUN/
---spotter_model=spotter_v2    
---spotter_config=/home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
-```
-
-```
---text_spotting_model_dir=/home/spotter_testr/TESTR/
---spotter_model=testr
---spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml  
-...
-```
+Then refer to this how-to-use [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter_v2 and spotter_testr. 
