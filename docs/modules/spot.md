@@ -17,8 +17,8 @@ The mapKurator system provides two state-of-the-art approaches for spotting text
 </p>
 
 - Text Spotters
-  - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>: A state-of-the-art text spotting model, originally on scene images, using <a href="https://arxiv.org/abs/2010.04159" target="_blank">Deformable Transformers</a>.
-  - Spotter-v2: We propose a new appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection and recognition performance. Code: TBD.
+  - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>: A state-of-the-art text spotting model, originally on scene images, using <a href="https://arxiv.org/abs/2010.04159" target="_blank">Deformable Transformers</a>. <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">[Code]</a>
+  - Spotter-v2: We propose a new appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection and recognition performance. <a href="https://github.com/knowledge-computing/mapkurator-spotter/tree/main" target="_blank">[Code]</a>
 
 - Training Process
   - Pretrain: We train the TESTR and Spotter-v2 with the synthetic datasets.
