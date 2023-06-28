@@ -62,8 +62,11 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 Create `osm` index @Jina
 
 Once you have `osm` index, you can create `osm-voca` index, please follow this procedure:
+
 ```python m5_post_ocr/preprocess.py```
+
 Then, you can find `total.csv` is created. Now, we can create osm-voca index by running:
+
 ```sudo /usr/share/logstash/bin/logstash -f m5_post_ocr/logstash-postocr.conf```.
 
 
