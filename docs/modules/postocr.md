@@ -7,40 +7,21 @@ The inputs for this module are geocoordinate converter results in `GeoJSON` form
 
 #### 1) Use run.py 
 
-##### Stand-alone PostOCR 
-
 Although the map image does not have Geo-coordinate, you can run stand-alone postOCR module.  
 
 ```
-python3 run.py --expt_name='57k_maps' --module_post_ocr_entity_linking --module_post_ocr_only
+python3 run.py --expt_name='57k_maps' --module_post_ocr
 ```
 
 where
 
 * `--expt_name`: experiment name for running the pipeline
-* `--module_post_ocr_entity_linking`: turns on the postOCR and entity linking module in this run
-* `--module_post_ocr_only`: turns on stand-alone postOCR module in this run
+* `--module_post_ocr`: turns on the postOCR module in this run
 
-##### PostOCR and Entity Linker
+#### 2) Use post_ocr_main.py
+If you do not have a metadata csv file, you can directly use post_ocr_main.py in m5_post_ocr folder.
+
+Sample command:
 ```
-python3 run.py --expt_name='57k_maps' --module_post_ocr_entity_linking
+python3 post_ocr_main.py --in_geojson_file --out_geojson_dir
 ```
-
-where
-
-* `--expt_name`: experiment name for running the pipeline
-* `--module_post_ocr_entity_linking`: turns on the post ocr and entity linking module in this run
-
-
-#### 2) Use post_ocr_entity_linker.py
-
-If you wish to specify the input and output specifically, you can use `post_ocr_entity_linker.py` in `m5_post_ocr_entity_linker` folder. 
-
-Sample command: 
-```
-python3 post_ocr_entity_linker.py --in_geojson_file='{map_level_prediction.geojson}' --out_geojson_dir='{directory_path}' 
-```
-
-* `--in_geojson_file`: input GeoJSON
-* `--out_geojson_dir`: output path to save the updated GeoJSON
-
