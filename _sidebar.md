@@ -27,8 +27,4 @@
   - [Multilingual Spotting](docs/multilingual.md)
   - [Fine-grain Text Spotting](docs/finegrain.md)
 
-- Data and Results
-  - [Ordnance Survey Maps](docs/os.md)
-  - [Sanborn Maps](docs/sanborn.md)
-
 - [Acknowledgements](docs/ack.md)
