@@ -25,3 +25,8 @@ Sample command:
 ```
 python3 post_ocr_main.py --in_geojson_file --out_geojson_dir
 ```
+
+where
+
+* `--in_geojson_file`: input geojson file for running the script
+* `--out_geojson_dir`: output directory path to save the processed file

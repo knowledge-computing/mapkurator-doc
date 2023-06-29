@@ -59,8 +59,6 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 * index `osm`: An Elasticsearch index of table `all_continents`
 * index `osm-voca`: An Elasticsearch index which contains place name attributes and its' popularity from the index `osm`
 
-Create `osm` index @Jina
-
 Once you have `osm` index, you can create `osm-voca` index, please follow this procedure:
 
 ```python m5_post_ocr/preprocess.py```
