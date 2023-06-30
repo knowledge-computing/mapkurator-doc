@@ -17,6 +17,8 @@ Setup an anaconda environment by running the following commands.
 ```conda create --name mapKurator -y python=3.8```   
 4. Activate the environment.       
 ```conda activate mapKurator```   
+#### Clone the mapKurator repository
+``` git clone https://github.com/knowledge-computing/mapkurator-system```. 
 
 #### Install Required Libraries       
 1. Install all python packages with the commands below.        
@@ -36,15 +38,20 @@ Setup an anaconda environment by running the following commands.
 6. Install Detectron      
 ```python -m pip install detectron2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html```     
 ```python3 -m pip install setuptools==59.5.0```     
-```Opencv dependencies required for detectron2.```     
+
+Opencv dependencies required for detectron2    
+
 ```apt-get update && apt-get install -y python3-opencv```      
 7. Install Adelaidet     
 ```git clone https://github.com/aim-uofa/AdelaiDet.git```      
 ```cd AdelaiDet```      
-```python setup.py build develop```      
-8. Clone the mapKurator repository with ``` git clone https://github.com/knowledge-computing/mapkurator-system```.      
+```python setup.py build develop```           
  
 Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
+
+#### Clone the mapKurator-textspotter repository
+```git clone https://github.com/knowledge-computing/mapkurator-spotter.git``` 
+
 
 #### Index Creation Procedures for PostOCR and Entity Linker Modules
 
