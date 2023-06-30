@@ -18,7 +18,7 @@ Setup an anaconda environment by running the following commands.
 4. Activate the environment.       
 ```conda activate mapKurator```   
 #### Clone the mapKurator repository
-``` git clone https://github.com/knowledge-computing/mapkurator-system```. 
+``` git clone https://github.com/knowledge-computing/mapkurator-system```
 
 #### Install Required Libraries       
 1. Install all python packages with the commands below.        
@@ -38,9 +38,6 @@ Setup an anaconda environment by running the following commands.
 6. Install Detectron      
 ```python -m pip install detectron2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html```     
 ```python3 -m pip install setuptools==59.5.0```     
-
-Opencv dependencies required for detectron2    
-
 ```apt-get update && apt-get install -y python3-opencv```      
 7. Install Adelaidet     
 ```git clone https://github.com/aim-uofa/AdelaiDet.git```      
