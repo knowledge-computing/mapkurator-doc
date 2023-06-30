@@ -17,10 +17,13 @@ Setup an anaconda environment by running the following commands.
 ```conda create --name mapKurator -y python=3.8```   
 4. Activate the environment.       
 ```conda activate mapKurator```   
+
 #### Clone the mapKurator repository
+
 ``` git clone https://github.com/knowledge-computing/mapkurator-system```
 
-#### Install Required Libraries       
+#### Install Required Libraries     
+
 1. Install all python packages with the commands below.        
 ```python -m pip install numpy==1.21.6```    
 ```python -m pip install opencv-python==4.7```    
