@@ -58,8 +58,8 @@ Please note that the mapKurator-system has been tested with the versions shown a
 
 #### Clone the mapKurator-textspotter repository
 ```git clone https://github.com/knowledge-computing/mapkurator-spotter.git``` <br>
-``` cd /mapkurator-spotter/spotter-v2``` <br>
-``` python setup.py build develop```<br>
+```cd /mapkurator-spotter/spotter-v2``` <br>
+```python setup.py build develop```<br>
 
 
 
