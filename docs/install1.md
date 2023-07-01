@@ -57,7 +57,10 @@ Setup an anaconda environment by running the following commands.
 Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
 
 #### Clone the mapKurator-textspotter repository
-```git clone https://github.com/knowledge-computing/mapkurator-spotter.git``` 
+```git clone https://github.com/knowledge-computing/mapkurator-spotter.git``` <br>
+``` cd /mapkurator-spotter/spotter-v2``` <br>
+``` python setup.py build develop```<br>
+
 
 
 #### Index Creation Procedures for PostOCR and Entity Linker Modules
