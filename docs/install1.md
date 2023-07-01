@@ -25,24 +25,31 @@ Setup an anaconda environment by running the following commands.
 #### Install Required Libraries     
 
 1. Install all python packages with the commands below.        
-```python -m pip install numpy==1.21.6```    
-```python -m pip install opencv-python==4.7```    
-```python -m pip install pandas==1.4.3 ```    
-```python -m pip install Pillow==9.4.0```     
-```pip install Polygon3 ```   
-```python -m pip install shapely==1.8.2```           
-```python -m pip install geojson==2.5.0```       
-```conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge```     
 
-2. Install ```gdal``` by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
-3. Install ```PostgreSQL``` by following the instructions [here](https://www.postgresql.org/download/). Tested version: 14.7
-4. Install ```elasticsearch``` by following the instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html). Tested version: 7.10.1
-5. Install ```logstash``` by following the instructions [here](https://www.elastic.co/guide/en/logstash/current/installing-logstash.html). Tested version: 8.7.0
-6. Install Detectron      
+```python -m pip install numpy==1.21.6```
+```python -m pip install opencv-python```
+```python -m pip install pandas==1.4.3```
+```python -m pip install Pillow==9.4.0```
+```pip install Polygon3```
+```python -m pip install shapely==1.8.2```
+```python -m pip install geojson==2.5.0```
+```python3 -m pip install setuptools==59.5.0```
+
+```conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge```
+```pip install scikit-image```
+```pip install matplotlib```
+```pip install numba```
+```pip install jupyterlab```
+
+
+3. Install ```gdal``` by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
+4. Install ```PostgreSQL``` by following the instructions [here](https://www.postgresql.org/download/). Tested version: 14.7
+5. Install ```elasticsearch``` by following the instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html). Tested version: 7.10.1
+6. Install ```logstash``` by following the instructions [here](https://www.elastic.co/guide/en/logstash/current/installing-logstash.html). Tested version: 8.7.0
+7. Install Detectron      
 ```python -m pip install detectron2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html```     
-```python3 -m pip install setuptools==59.5.0```     
-```apt-get update && apt-get install -y python3-opencv```      
-7. Install Adelaidet     
+  
+8. Install Adelaidet     
 ```git clone https://github.com/aim-uofa/AdelaiDet.git```      
 ```cd AdelaiDet```      
 ```python setup.py build develop```           
