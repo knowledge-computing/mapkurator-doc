@@ -26,19 +26,19 @@ Setup an anaconda environment by running the following commands.
 
 1. Install all python packages with the commands below.        
 
-```python -m pip install numpy==1.21.6```
-```python -m pip install opencv-python```
-```python -m pip install pandas==1.4.3```
-```python -m pip install Pillow==9.4.0```
-```pip install Polygon3```
-```python -m pip install shapely==1.8.2```
-```python -m pip install geojson==2.5.0```
-```python3 -m pip install setuptools==59.5.0```
+```python -m pip install numpy==1.21.6```<br>
+```python -m pip install opencv-python```<br>
+```python -m pip install pandas==1.4.3```<br>
+```python -m pip install Pillow==9.4.0```<br>
+```pip install Polygon3```<br>
+```python -m pip install shapely==1.8.2```<br>
+```python -m pip install geojson==2.5.0```<br>
+```python3 -m pip install setuptools==59.5.0```<br>
 
-```conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge```
-```pip install scikit-image```
-```pip install matplotlib```
-```pip install numba```
+```conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge```<br>
+```pip install scikit-image```<br>
+```pip install matplotlib```<br>
+```pip install numba```<br>
 ```pip install jupyterlab```
 
 
