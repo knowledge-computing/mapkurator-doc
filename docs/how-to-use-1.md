@@ -105,12 +105,6 @@ optional arguments:
 --gpu_id=ADD_YOUR_GPU_ID
 ```
 
-Commands for spotter_testr configuration:      
-```
---text_spotting_model_dir=/home/spotter_testr/TESTR/
---spotter_model=testr
---spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml  
-```
 
 Commands for spotter_v2 configuratiom:       
 ```
@@ -118,3 +112,11 @@ Commands for spotter_v2 configuratiom:
 --spotter_model=spotter_v2    
 --spotter_config=/home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
 ```
+
+Commands for spotter_testr configuration:      
+```
+--text_spotting_model_dir=/home/spotter_testr/TESTR/
+--spotter_model=testr
+--spotter_config=/home/spotter_testr/TESTR/configs/TESTR/SynthMap/SynthMap_Polygon.yaml  
+```
+
