@@ -82,7 +82,7 @@ conda activate mapkurator
 Then you can use  upto the stitch module using the sample command below.     
 
 ```
-python  --map_kurator_system_dir /home/mapkurator-system/ --sample_map_csv_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter_v2/PALEJUN/ --spotter_model spotter_v2 --spotter_config /home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml --spotter_expt_name test --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
+python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_path /home/mapkurator-test-images/input/ --expt_name mapKurator_test --module_cropping --module_get_dimension --module_text_spotting --text_spotting_model_dir /home/spotter_v2/PALEJUN/ --spotter_model spotter_v2 --spotter_config /home/spotter_v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml --spotter_expt_name test --module_img_geojson --output_folder /home/mapkurator-test-images/output/ --gpu_id 0
 ```
 
 ```
