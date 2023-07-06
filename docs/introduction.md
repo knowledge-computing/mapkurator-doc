@@ -2,6 +2,17 @@
 
 mapKurator is a fully automatic pipeline developed by the **Knowledge Computing Lab** at the **University of Minnesota** to process a large number of scanned historical map images. **Outputs** include the recognized text labels, label bounding polygons, labels after post-OCR correction, and a geo-entity identifier from OpenStreetMap.
 
+
+The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps <br>
+https://arxiv.org/abs/2306.17059 
+
+> @article{kim2023mapkurator,
+  title={The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
+  author={Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
+  journal={arXiv preprint arXiv:2306.17059},
+  year={2023}
+}
+
 ### Model Summary
 
 - **Orange boxes:** Modules in the pipeline
