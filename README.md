@@ -3,6 +3,9 @@
 
 mapKurator is a fully automatic pipeline to process a large amount of scanned historical map images. Outputs include the recognized text labels, label bounding polygons, labels after post-OCR correction and geo-entity identifier in OSM database.
 
+### Official website URL for mapKurator documentation
+https://knowledge-computing.github.io/mapkurator-doc/#/ 
+
 ### License
 CC BY-NC 2.0
 
