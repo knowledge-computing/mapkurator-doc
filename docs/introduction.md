@@ -35,3 +35,8 @@ https://arxiv.org/abs/2306.17059
 - **GeocoordinateConverter**  converts the bounding polygons of text labels from the image coordinate system to the geocoordinate system. **Note**: The polygons in both coordinate systems are saved in the output. 
 
 - **EntityLinker** links each map text to all the candidate geo-entities in OpenStreetMap. The entity linking retrieves candidates that satisfy both criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name 2) the geocoordinates of a geo-entity is within the map boundary. (Geo-coordinates are obtained from GeocoordConverter)
+
+
+
+### License
+CC BY-NC 2.0 
