@@ -93,6 +93,7 @@ To check the website on your local browser, go to the browser and type in the ur
  
 <p align="justify">Run the docker container with the following command.</p>       
  
+
 ```
  docker run -it --name YOUR_CONTAINER_NAME --gpus all -p YOUR_PORT_ON_LOCAL:YOUR_PORT_ON_DOCKER knowledgecomputing/mapkurator_recogito_2023    
 ```
