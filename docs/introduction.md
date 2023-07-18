@@ -15,11 +15,11 @@ https://arxiv.org/abs/2306.17059
 
 ### Model Summary
 
-- **Orange boxes:** Modules in the pipeline
+- **Green boxes:** Modules in the pipeline
 - **Blue boxes:** Inputs of the modules
-- **Green boxes:** Outputs of the modules
+- **Orange boxes:** Outputs of the modules
 
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/5383572/230442791-93497b26-5071-4c47-9947-7f6000306efb.png">
+<img width="1000" alt="image" src="_media/system.png">
 
 
 
