@@ -4,7 +4,7 @@ All the modules can be launched from `run.py`. All the outputs will be saved in 
 ```
 usage: run.py [-h] [--map_kurator_system_dir MAP_KURATOR_SYSTEM_DIR] [--text_spotting_model_dir TEXT_SPOTTING_MODEL_DIR]
               [--sample_map_csv_path SAMPLE_MAP_CSV_PATH] [--output_folder OUTPUT_FOLDER] [--expt_name EXPT_NAME] [--module_get_dimension]
-              [--module_gen_geotiff] [--module_cropping] [--module_text_spotting] [--module_img_geojson] [--module_geocoord_geojson] [--module_post_ocr_entity_linking] [--spotter_model {abcnet,testr}] [--spotter_config SPOTTER_CONFIG] [--spotter_expt_name SPOTTER_EXPT_NAME] [--print_command]
+              [--module_gen_geotiff] [--module_cropping] [--module_text_spotting] [--module_img_geojson] [--module_post_ocr] [--module_geocoord_geojson] [--module_entity_linking] [--spotter_model {abcnet,testr}] [--spotter_config SPOTTER_CONFIG] [--spotter_expt_name SPOTTER_EXPT_NAME] [--print_command]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -18,8 +18,8 @@ optional arguments:
   --module_cropping
   --module_text_spotting
   --module_img_geojson
-  --module_geocoord_geojson
   --module_post_ocr
+  --module_geocoord_geojson
   --module_entity_linking
   --spotter_model {abcnet,testr}
                         Select text spotting model option from ["abcnet","testr"]
@@ -55,6 +55,12 @@ python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metada
                 --module_img_geojson
 ```
 
+Example for running the stand-alone **PostOCR** module
+```
+python3 run.py --expt_name='57k_maps' 
+               --module_post_ocr
+```
+
 Example for running the **GeocoordinateConverter** module
 ```
 python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
@@ -62,10 +68,11 @@ python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metada
                 --module_geocoord_geojson
 ```
 
-Example for running the stand-alone **PostOCR** module
+Example for running the **EntityLinker** module
 ```
-python3 run.py --expt_name='57k_maps' 
-               --module_post_ocr
+python3 run.py  --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv'  
+                --expt_name='57k_maps' 
+                --module_entity_linking
 ```
 
 ### Using mapKurator-Recogito docker image for standalone mapKurator 
@@ -88,8 +95,8 @@ python run_img.py --map_kurator_system_dir /home/mapkurator-system/ --input_dir_
 ```
 usage: run_img.py [-h] [--map_kurator_system_dir MAP_KURATOR_SYSTEM_DIR] [--text_spotting_model_dir TEXT_SPOTTING_MODEL_DIR]
                   [--input_dir_path INPUT_DIR_PATH] [--output_folder OUTPUT_FOLDER] [--expt_name EXPT_NAME] [--module_get_dimension]
-                  [--module_gen_geotiff] [--module_cropping] [--module_text_spotting] [--module_img_geojson] [--module_geocoord_geojson]
-                  [--module_entity_linking] [--module_post_ocr] [--spotter_model {abcnet,testr,spotter_v2,spotter_v3}] [--spotter_config SPOTTER_CONFIG]
+                  [--module_gen_geotiff] [--module_cropping] [--module_text_spotting] [--module_img_geojson] [--module_post_ocr] 
+                  [--module_geocoord_geojson] [--module_entity_linking] [--spotter_model {abcnet,testr,spotter_v2,spotter_v3}] [--spotter_config SPOTTER_CONFIG]
                   [--spotter_expt_name SPOTTER_EXPT_NAME] [--print_command] [--gpu_id GPU_ID]
                   
 optional arguments:
