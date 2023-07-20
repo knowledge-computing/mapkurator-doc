@@ -13,7 +13,7 @@ A sample visualization is provided in the figure below.
 <img width="1671" alt="image" src="https://user-images.githubusercontent.com/5383572/236355342-0928704c-41f5-40c3-a42e-543bb33a5e55.png">
 
 ### Commands
-The inputs for this module are 1) metadata that stores transformation method and ground control points in `csv` format and 2) map-level results in `geojson` format. You can simply overlay the output json onto map background for visualization on QGIS.
+The inputs for this module are 1) metadata that stores transformation method and ground control points in `CSV` format and 2) map-level results in `GeoJSON` format. You can simply overlay the output json onto map background for visualization on QGIS.
 
 #### 1) Use run.py 
 ```
@@ -22,7 +22,7 @@ python3 run.py --sample_map_csv_path='/home/maplord/maplist_csv/luna_omo_metadat
 
 where
 
-* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ).
+* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://searchworks.stanford.edu/view/ss311gz1992).
 * `--output_folder`: output directory
 * `--expt_name`: experiment name for running the pipeline
 * `--module_geocoord_geojson` turns on the geocoordinate converter module in this run
@@ -33,7 +33,7 @@ If you wish to specify the input and output specifically, you can use `convert_g
 
 Sample command: 
 ```
-python3 stich_output.json --sample_map_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv' --in_geojson_file='{map_level_prediction.geojson}' --out_geojson_dir='{directory_path}' 
+python3 convert_geojson_to_geocoord.py --sample_map_path='/home/maplord/maplist_csv/luna_omo_metadata_56628_20220724.csv' --in_geojson_file='{map_level_prediction.geojson}' --out_geojson_dir='{directory_path}' 
 ```
 
 * `--sample_map_path`: stores the metadata of the input map
