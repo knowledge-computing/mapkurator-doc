@@ -19,7 +19,7 @@ where
 
 #### 2) Use entity_linking.py
 
-If you wish to specify the input and output specifically, you can use `convert_geojson_to_geocoord.py` in `m4_geocoordinate_converter` folder. 
+If you wish to specify the input and output specifically, you can use `entity_linking.py` in `m6_entity_linker` folder. 
 
 Sample command: 
 ```

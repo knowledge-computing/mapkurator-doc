@@ -29,7 +29,7 @@ where
 
 #### 2) Use convert_geojson_to_geocoord.py
 
-If you wish to specify the input and output specifically, you can use `convert_geojson_to_geocoord.py` in `m4_geocoordinate_converter` folder. 
+If you wish to specify the input and output specifically, you can use `convert_geojson_to_geocoord.py` in `m5_geocoordinate_converter` folder. 
 
 Sample command: 
 ```
