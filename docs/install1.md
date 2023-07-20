@@ -95,6 +95,8 @@ Then run the container with -
 ```
 docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  knowledgecomputing/mapkurator_recogito_2023 
 ```  
-NOTE: Using -v option in the command above, gives your docker container access to the folders on host, to manipulate the filesystem. More documentation can be found at this [link](https://docs.docker.com/storage/volumes/)
+**NOTE**: 
+1) Remember to change `/PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE` in the above command to an actual path on your host machine. 
+2) The -v option in the command above gives your docker container access to the folders on host machine. More documentation can be found at this [link](https://docs.docker.com/storage/volumes/)
 
 Then refer to this how-to-use [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter_v2 and spotter_testr. 
