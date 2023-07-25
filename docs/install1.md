@@ -2,8 +2,7 @@ The stand-alone mapKurator-system requires that *cuda_11.3* with *cudnn* and *nv
      
 Note that *cuda_11.3* only provided support for *Ubuntu 20.04* and below at the time this document was created. 
 
-### Installing mapKurator on Ubuntu18.04 with cuda_11.3_devel 
-
+### Installing mapKurator on Ubuntu18.04 with cuda_11.3_devel
 #### Setup Anaconda 
 Setup an anaconda environment by running the following commands.   
     
@@ -42,30 +41,38 @@ Setup an anaconda environment by running the following commands.
 ```pip install jupyterlab```
 
 
-3. Install ```gdal``` by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
-4. Install ```PostgreSQL``` by following the instructions [here](https://www.postgresql.org/download/). Tested version: 14.7
-5. Install ```elasticsearch``` by following the instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html). Tested version: 7.10.1
-6. Install ```logstash``` by following the instructions [here](https://www.elastic.co/guide/en/logstash/current/installing-logstash.html). Tested version: 8.7.0
-7. Install Detectron      
+2. Install ```gdal``` by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
+3. Install ```PostgreSQL``` by following the instructions [here](https://www.postgresql.org/download/). Tested version: 14.7
+4. Install ```elasticsearch``` by following the instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html). Tested version: 7.10.1
+5. Install ```logstash``` by following the instructions [here](https://www.elastic.co/guide/en/logstash/current/installing-logstash.html). Tested version: 8.7.0
+6. Install Detectron      
 ```python -m pip install detectron2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html```     
   
-8. Install Adelaidet     
+7. Install Adelaidet     
 ```git clone https://github.com/aim-uofa/AdelaiDet.git```      
 ```cd AdelaiDet```      
 ```python setup.py build develop```           
  
-Please note that the mapKurator-system has been tested with the versions shown above only. If you test it on latest versions and find any issues, please let us know!       
+Please note that the mapKurator has been tested with the versions shown above only. If you tested it on the latest versions and found any issues, please let us know.       
 
 #### Clone the mapKurator-textspotter repository
 ```git clone https://github.com/knowledge-computing/mapkurator-spotter.git``` <br>
 ```cd /mapkurator-spotter/spotter-v2``` <br>
 ```python setup.py build develop```<br>
 
+#### OpenStreetMap Data Retrieval & Index Creation for PostOCR and Entity Linker Modules
 
+To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and Elasticsearch search engine with Logstash. The tested version of each software is mentioned above.
 
-#### Index Creation Procedures for PostOCR and Entity Linker Modules
+*Note that the following procedures are the demonstration of creating indices using OpenStreetMap.*
 
-To retrieve OpenStreetMap geo-entities and popularity score (i.e., frequency of geo-entities' names), we utilize [Postgres](https://www.postgresql.org/) database and Elasticsearch search engine.
+##### OpenStreetMap Data Retrieval
+1. Download OpenStreetMap geo-entities of each continent in [Geofabrik](https://download.geofabrik.de/) (file format: .osm.pbf)
+2. Create Postgres database and run ```CREATE EXTENSION postgis;```
+3. Upload OpenStreetMap files (.osm.pbf) to Postgres database. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py)
+4. Create `all_continents` table and insert all OpenStreetMap geo-entities' id, names, and the corresponding source tables. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_all_continents.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_all_continents.py)
+
+##### Index Creation
 
 <img width="800px" src="_media/databases.jpg"></br>
 
@@ -74,18 +81,17 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 * table `all_continents` : A table of all OpenStreetMap geo-entities' id, names, and the corresponding source tables
 * schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
 * index `osm`: An Elasticsearch index of table `all_continents`
-* index `osm-voca`: An Elasticsearch index which contains place name attributes and its' popularity from the index `osm`
+* index `osm-voca`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and their popularity from the index  `osm`
+* index `osm-linker`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and the list of geo-entities' id and the corresponding source tables
 
-Once you have `osm` index, you can create `osm-voca` index, please follow this procedure:
-
-```python m5_post_ocr/preprocess.py```
-
-Then, you can find `total.csv` is created. Now, we can create osm-voca index by running:
-
-```sudo /usr/share/logstash/bin/logstash -f m5_post_ocr/logstash-postocr.conf```.
+1. Create `osm` index on Elasticsearch using `all_continents` table on Postgres. Please refer the following logstash configuration file: [m6_entity_linker/logstash-postgres-world.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash-postgres-world.conf)
+2. Create `osm-voca` index on Elasticsearch which is used for PostOCR module. Please run or modify [m4_post_ocr/preprocess.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/preprocess.py) and you will find the generated csv file named `total.csv`. 
+   Then, refer the following logstash configuration file to create `osm-voca`: [m4_post_ocr/logstash-postocr.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/logstash-postocr.conf)
+3. Create `osm-linker` index on Elasticsearch which is used for EntityLinker module: Please run or modify [m6_entity_linker/create_elasticsearch_index.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/create_elasticsearch_index.py) and you will find the generated csv file named `osm_linker.csv`.
+   Then, refer the following logstash configuration file to create `osm-linker`: [m6_entity_linker/logstash_osm_linker.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash_osm_linker.conf)
 
 
-### Using mapKurator-Recogito docker image for standalone mapKurator - 
+### Using mapKurator-Recogito docker image for standalone mapKurator 
 NOTE: This section tested upto stitch module.       
 
 If you face issues with the cuda installation, please consider using our docker image which is built on [nvidia/cuda:11.3.0-devel-ubuntu18.04](https://hub.docker.com/layers/nvidia/cuda/11.3.0-devel-ubuntu18.04/images/sha256-79ba930c17842750cd646dd9e78911199f48b7ea1f7ec378dbf90fdea1d95ba1?context=explore). 
