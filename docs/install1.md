@@ -82,7 +82,7 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 * schema `{each continent}` table `{points, lines, multilinestrings, multipolygons, other_relations}`: A source table of OpenStreetMap geo-entities including names, semantic types, and geometries
 * index `osm`: An Elasticsearch index of table `all_continents`
 * index `osm-voca`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and their popularity from the index  `osm`
-* index `osm-linker`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and the list of geo-entities' id and the corresponding source tables
+* index `osm-linker`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and the list of geo-entities' id with the corresponding source tables
 
 1. Create `osm` index on Elasticsearch using `all_continents` table on Postgres. Please refer the following logstash configuration file: [m6_entity_linker/logstash-postgres-world.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash-postgres-world.conf)
 2. Create `osm-voca` index on Elasticsearch which is used for PostOCR module. Please run or modify [m4_post_ocr/preprocess.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/preprocess.py) and you will find the generated csv file named `total.csv`. 
