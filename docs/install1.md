@@ -84,9 +84,9 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 * index `osm-voca`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and their popularity from the index  `osm`
 * index `osm-linker`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and the list of geo-entities' id with the corresponding source tables
 
-1. Create `osm` index on Elasticsearch using `all_continents` table on Postgres. Please refer the following logstash configuration file: [m6_entity_linker/logstash-postgres-world.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash-postgres-world.conf)
+1. Create `osm` index on Elasticsearch using `all_continents` table on Postgres. Please refer the following logstash configuration file: [m6_entity_linker/logstash_postgres_world.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash_postgres_world.conf)
 2. Create `osm-voca` index on Elasticsearch which is used for PostOCR module. Please run or modify [m4_post_ocr/preprocess.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/preprocess.py) and you will find the generated csv file named `total.csv`. 
-   Then, refer the following logstash configuration file to create `osm-voca`: [m4_post_ocr/logstash-postocr.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/logstash-postocr.conf)
+   Then, refer the following logstash configuration file to create `osm-voca`: [m4_post_ocr/logstash_postocr.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/logstash_postocr.conf)
 3. Create `osm-linker` index on Elasticsearch which is used for EntityLinker module: Please run or modify [m6_entity_linker/create_elasticsearch_index.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/create_elasticsearch_index.py) and you will find the generated csv file named `osm_linker.csv`.
    Then, refer the following logstash configuration file to create `osm-linker`: [m6_entity_linker/logstash_osm_linker.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash_osm_linker.conf)
 
