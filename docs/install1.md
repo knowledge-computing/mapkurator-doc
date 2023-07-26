@@ -18,11 +18,9 @@ Setup an anaconda environment by running the following commands.
 ```conda activate mapKurator```   
 
 #### Clone the mapKurator repository
-
 ``` git clone https://github.com/knowledge-computing/mapkurator-system```
 
-#### Install required libraries     
-
+#### Install required libraries
 1. Install all python packages with the commands below.        
 
 ```python -m pip install numpy==1.21.6```<br>
@@ -39,7 +37,6 @@ Setup an anaconda environment by running the following commands.
 ```pip install matplotlib```<br>
 ```pip install numba```<br>
 ```pip install jupyterlab```
-
 
 2. Install ```gdal``` by following the instructions [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html) 
 3. Install ```PostgreSQL``` by following the instructions [here](https://www.postgresql.org/download/). Tested version: 14.7
@@ -80,7 +77,8 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 1. Download OpenStreetMap geo-entities of each continent in [Geofabrik](https://download.geofabrik.de/) (file format: .osm.pbf)
 2. Create Postgres database and run ```CREATE EXTENSION postgis;```
 3. Upload OpenStreetMap files (.osm.pbf) to Postgres database. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py)
-4. Create `all_continents` table and insert all OpenStreetMap geo-entities' id, names, and the corresponding source tables. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_all_continents.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_all_continents.py)
+4. Create generic index structure ([GIST](https://postgis.net/workshops/postgis-intro/indexing.html)) of `osm_id` and `wkb_geometry` columns for each table. Please run or modify the following code: [m6_entity_linker/create_spatial_index_postgres.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/create_spatial_index_postgres.py)
+5. Create `all_continents` table and insert all OpenStreetMap geo-entities' id, names, and the corresponding source tables. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_all_continents.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_all_continents.py)
 
 ##### Index creation on Elasticsearch
 1. Create `osm` index on Elasticsearch using `all_continents` table on Postgres. Please refer the following logstash configuration file: [m6_entity_linker/logstash_postgres_world.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash_postgres_world.conf)
