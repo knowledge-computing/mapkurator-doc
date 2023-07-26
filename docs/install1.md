@@ -76,13 +76,13 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 * index `osm-linker`: An Elasticsearch index that contains a unique vocabulary set of single words from geo-entities' names and the list of geo-entities' id with the corresponding source tables
 
 
-##### OpenStreetMap Data Retrieval
+##### OpenStreetMap data to Postgres database
 1. Download OpenStreetMap geo-entities of each continent in [Geofabrik](https://download.geofabrik.de/) (file format: .osm.pbf)
 2. Create Postgres database and run ```CREATE EXTENSION postgis;```
 3. Upload OpenStreetMap files (.osm.pbf) to Postgres database. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py)
 4. Create `all_continents` table and insert all OpenStreetMap geo-entities' id, names, and the corresponding source tables. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_all_continents.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_all_continents.py)
 
-##### Index Creation
+##### Index creation on Elasticsearch
 1. Create `osm` index on Elasticsearch using `all_continents` table on Postgres. Please refer the following logstash configuration file: [m6_entity_linker/logstash_postgres_world.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash_postgres_world.conf)
 2. Create `osm-voca` index on Elasticsearch which is used for PostOCR module. Please run or modify [m4_post_ocr/preprocess.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/preprocess.py) and you will find the generated csv file named `total.csv`. 
    Then, refer the following Logstash configuration file to create `osm-voca`: [m4_post_ocr/logstash_postocr.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/logstash_postocr.conf)
