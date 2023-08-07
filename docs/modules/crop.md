@@ -18,7 +18,7 @@ To run cropping, you can call `run.py` with the following command:
 
 where
 
-* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ). 
+* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://searchworks.stanford.edu/view/ss311gz1992). 
 * `--module_cropping` turns on the cropping module in this run
 
 #### 2) Use crop_img.py
