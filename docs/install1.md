@@ -76,7 +76,7 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
 ##### OpenStreetMap data to Postgres database
 1. Download OpenStreetMap geo-entities of each continent in [Geofabrik](https://download.geofabrik.de/) (file format: .osm.pbf)
 2. Create Postgres database and run ```CREATE EXTENSION postgis;```
-3. Upload OpenStreetMap files (.osm.pbf) to Postgres database. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py)
+3. Upload OpenStreetMap files (.osm.pbf) to Postgres database. Please run the following code after setting up the appropriate environment variables: [m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_ogr2ogr.py)
 4. Create generic index structure ([GIST](https://postgis.net/workshops/postgis-intro/indexing.html)) of `osm_id` and `wkb_geometry` columns for each table. Please run or modify the following code: [m6_entity_linker/create_spatial_index_postgres.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/create_spatial_index_postgres.py)
 5. Create `all_continents` table and insert all OpenStreetMap geo-entities' id, names, and the corresponding source tables. Please run or modify the following code: [m6_entity_linker/upload_osm_to_postgres_all_continents.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/upload_osm_to_postgres_all_continents.py)
 
