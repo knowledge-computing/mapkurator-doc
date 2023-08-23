@@ -3,16 +3,6 @@
 mapKurator is a fully automatic pipeline developed by the **Knowledge Computing Lab** at the **University of Minnesota** to process a large number of scanned historical map images. **Outputs** include the recognized text labels, label bounding polygons, labels after post-OCR correction, and a geo-entity identifier from OpenStreetMap.
 
 
-The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps <br>
-https://arxiv.org/abs/2306.17059 
-
-> @article{kim2023mapkurator,
-  title={The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
-  author={Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
-  journal={arXiv preprint arXiv:2306.17059},
-  year={2023}
-}
-
 ### Model Summary
 
 - **Green boxes:** Modules in the pipeline
@@ -36,6 +26,24 @@ https://arxiv.org/abs/2306.17059
 
 - **EntityLinker** links each map text to all the candidate geo-entities in OpenStreetMap. The entity linking retrieves candidates that satisfy both criteria: 1) the suggested word (i.e. output from PostOCR) is a substring of the candidate geo-entity's name 2) the geocoordinates of a geo-entity is within the map boundary. (Geo-coordinates are obtained from GeocoordConverter)
 
+### Cite
+
+```
+@inproceedings{li2020automatic,
+  title={An automatic approach for generating rich, linked geo-metadata from historical map images},
+  author={Li, Zekun and Chiang, Yao-Yi and Tavakkol, Sasan and Shbita, Basel and Uhl, Johannes H and Leyk, Stefan and Knoblock, Craig A},
+  booktitle={Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages={3290--3298},
+  year={2020}
+}
+
+@article{kim2023mapkurator,
+  title={The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
+  author={Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
+  journal={arXiv preprint arXiv:2306.17059},
+  year={2023}
+}
+```
 
 ### License
 CC BY-NC 2.0 
