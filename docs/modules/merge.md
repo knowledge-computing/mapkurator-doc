@@ -31,7 +31,7 @@ If you do not have a metadata csv file, or wish to specify the input and output 
 
 Sample command: 
 ```
-python3 stich_output.json --input_dir='folder_contains_patch_level_jsons' --output_geojson='map_level_prediction.geojson' --shift_size=1000 
+python3 stitch_output.py --input_dir='folder_contains_patch_level_jsons' --output_geojson='map_level_prediction.geojson' --shift_size=1000 
 ```
 
 * `--input_dir`: input directory to the patch-level spotting results in json
