@@ -7,8 +7,8 @@ The mapKurator system provides two state-of-the-art approaches for spotting text
 
 - Training Datasets
   - Synthetic datasets:  
-    - <b>SynthText:</b> We select 40k text-free background images from <a href="https://cocodataset.org/#home" target="_blank">COCO</a> and use them to generate synthetic text images (see the left image). <b>Code:</b> <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a>; <a href="https://s3.msi.umn.edu/rumsey-spotter-train-data-en/SynthText.zip" target="_blank" >Dataset</a> 
-    - <b>SynMap:</b> We propose an approach to generate synthetic maps that mimic the text (e.g., font, spacing, orientation) and background styles in the real historical maps (see the right image). <b>Code:</b> TBD; <a href="https://s3.msi.umn.edu/rumsey-spotter-train-data-en/SynthMap.zip" target="_blank" >Dataset:</a> 
+    - <b>SynthText:</b> We select 40k text-free background images from <a href="https://cocodataset.org/#home" target="_blank">COCO</a> and use them to generate synthetic text images (see the left image). <b>Code:</b> <a href="https://github.com/ankush-me/SynthText" target="_blank">Github</a> and <a href="https://s3.msi.umn.edu/rumsey-spotter-train-data-en/SynthText.zip" target="_blank" >Dataset</a> 
+    - <b>SynMap:</b> We propose an approach to generate synthetic maps that mimic the text (e.g., font, spacing, orientation) and background styles in the real historical maps (see the right image). <b>Code:</b> TBD <a href="https://s3.msi.umn.edu/rumsey-spotter-train-data-en/SynthMap.zip" target="_blank" >Dataset:</a> 
     - The synthetic datasets are in English, Arabic, Russian, and Chinese. We use these datasets for training multilingual text spotters (see <a href="https://knowledge-computing.github.io/mapkurator-doc/#/docs/multilingual" target="_blank">Multilingual Spotting</a>).
   - <a href="https://s3.msi.umn.edu/rumsey-spotter-train-data-en/rumsey-train.zip" target="_blank" >Human Annotations </a> 
 
