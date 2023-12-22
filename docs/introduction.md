@@ -37,11 +37,21 @@ mapKurator is a fully automatic pipeline developed by the **Knowledge Computing 
   year={2020}
 }
 
-@article{kim2023mapkurator,
-  title={The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
-  author={Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
-  journal={arXiv preprint arXiv:2306.17059},
-  year={2023}
+@inproceedings{10.1145/3589132.3625579,
+    author = {Kim, Jina and Li, Zekun and Lin, Yijun and Namgung, Min and Jang, Leeje and Chiang, Yao-Yi},
+    title = {The MapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps},
+    year = {2023},
+    isbn = {9798400701689},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3589132.3625579},
+    doi = {10.1145/3589132.3625579},
+    booktitle = {Proceedings of the 31st ACM International Conference on Advances in Geographic Information Systems},
+    articleno = {35},
+    numpages = {4},
+    keywords = {linked data, automatic system, text spotter, historical maps},
+    location = {, Hamburg, Germany, },
+    series = {SIGSPATIAL '23}
 }
 ```
 
