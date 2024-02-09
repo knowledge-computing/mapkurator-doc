@@ -1,7 +1,7 @@
 
 ### Description 
 
-The mapKurator system provides two state-of-the-art approaches for spotting text instances on scaned historical maps. Both approaches, <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a> and Spotter-v2, are built upon <a href="https://github.com/fundamentalvision/Deformable-DETR" target="_blank">Deformable-DETR</a>.
+mapKurator System provides multiple state-of-the-art approaches for spotting text instances on scaned historical maps: <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>, <a href="https://github.com/knowledge-computing/mapkurator-spotter" target="_blank">Spotter-v2</a>, and <a href="https://github.com/knowledge-computing/mapkurator-palette" target="_blank">PALETTE</a>.
 
 ### Training Processs
 
@@ -18,10 +18,11 @@ The mapKurator system provides two state-of-the-art approaches for spotting text
 
 - Text Spotters
   - <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">TESTR</a>: A state-of-the-art text spotting model, originally on scene images, using <a href="https://arxiv.org/abs/2010.04159" target="_blank">Deformable Transformers</a>. <a href="https://github.com/mlpc-ucsd/TESTR" target="_blank">[Code]</a>
-  - Spotter-v2: We propose a new appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection and recognition performance. <a href="https://github.com/knowledge-computing/mapkurator-spotter/tree/main" target="_blank">[Code]</a>
+  - Spotter-v2: We propose a new appoach adopts a novel feature sampling strategy that samples relevant image features around the target points for predicting boundary points, which leads to enhanced detection performance. <a href="https://github.com/knowledge-computing/mapkurator-spotter" target="_blank">[Code]</a>
+  - PALETTE: We propose a new appoach adopts a novel hyper-local feature sampling strategy that samples relevant image features around the target components (boundary points and characters), which leads to enhanced detection and recognition performance. <a href="https://github.com/knowledge-computing/mapkurator-palette" target="_blank">[Code]</a>
 
 - Training Process
-  - Pretrain: We train the TESTR and Spotter-v2 with the synthetic datasets.
+  - Pretrain: We train the TESTR, Spotter-v2, and PALETTE with the synthetic datasets.
   - Finetune: We finetune the models with human annotations.
   
 
