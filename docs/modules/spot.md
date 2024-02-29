@@ -38,7 +38,7 @@ python run.py --module_text_spotting
               --text_spotting_model_dir ./spotter-v2/PALEJUN/
               --expt_name sample_maps 
               --spotter_model spotter-v2
-              --spotter_config ./spotter-v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
+              --spotter_config  /home/spotter_v2/PALEJUN/configs/PALEJUN/Finetune/Rumsey_Polygon_Finetune.yaml
               --spotter_expt_name test
               --gpu_id 0
 ```
@@ -60,7 +60,7 @@ where
 If you do not have a metadata csv file, or wish to specify the input path of image directly, you can use `tools/inference.py` in the model folder (i.e., text_spotting_model_dir). 
 
 ```
-python tools/inference.py --config-file ./spotter-v2/PALEJUN/configs/PALEJUN/SynthMap/SynthMap_Polygon.yaml
+python tools/inference.py --spotter_config  /home/spotter_v2/PALEJUN/configs/PALEJUN/Finetune/Rumsey_Polygon_Finetune.yaml
                           --output_json 
                           --input ./test_images
                           --output ./output
