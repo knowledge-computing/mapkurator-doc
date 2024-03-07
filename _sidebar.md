@@ -12,15 +12,11 @@
   - [Entity Linker](docs/modules/linker.md)
 
 
-- Use Stand-alone mapKurator
-
+- Use  mapKurator
+- 
   - [Installation](docs/install1.md)
   - [How to Use](docs/how-to-use-1.md)
   
-
-- Use mapKurator with Recogito
-  - [Installation](docs/install2.md)
-  - [How to Use](docs/how-to-use-2.md)
 
 
 - Ongoing Research
