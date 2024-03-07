@@ -9,7 +9,7 @@ NOTE: The docker image supports upto stitch module.
 
 If you would like to get a quick set up to try out our text spotting feature without Post-OCR and Entity linking modules, please consider using our docker image which is built on [nvidia/cuda:11.3.0-devel-ubuntu18.04](https://hub.docker.com/layers/nvidia/cuda/11.3.0-devel-ubuntu18.04/images/sha256-79ba930c17842750cd646dd9e78911199f48b7ea1f7ec378dbf90fdea1d95ba1?context=explore). For full features of mapKurator, please follow Option 2 for installation. 
 
-To try it out, first pull the docker image with the following command - ```docker pull knowledgecomputing/mapkurator_recogito_2023:latest```
+First pull the docker image with the following command - ```docker pull knowledgecomputing/mapkurator_recogito_2023:latest```
 Then run the container with - 
 ```
 docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  knowledgecomputing/mapkurator_recogito_2023 
