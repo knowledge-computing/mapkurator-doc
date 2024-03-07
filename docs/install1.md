@@ -1,6 +1,27 @@
-The stand-alone mapKurator-system requires that *cuda_11.3* with *cudnn* and *nvidia-smi* is working properly on the underlying host OS. For a successful installation, you may need to use *cuda_11.3-devel*. You can learn more [here](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA).     
+
+The mapKurator-system requires that *cuda_11.3* with *cudnn* and *nvidia-smi* is working properly on the underlying host OS. For a successful installation, you may need to use *cuda_11.3-devel*. You can learn more [here](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA).     
      
 Note that *cuda_11.3* only provided support for *Ubuntu 20.04* and below at the time this document was created. 
+
+
+### Using mapKurator-Recogito docker image for standalone mapKurator 
+NOTE: The docker image supports upto stitch module.       
+
+If you face issues with the cuda installation, please consider using our docker image which is built on [nvidia/cuda:11.3.0-devel-ubuntu18.04](https://hub.docker.com/layers/nvidia/cuda/11.3.0-devel-ubuntu18.04/images/sha256-79ba930c17842750cd646dd9e78911199f48b7ea1f7ec378dbf90fdea1d95ba1?context=explore). 
+
+To try it out, first pull the docker image with the following command - ```docker pull knowledgecomputing/mapkurator_recogito_2023:latest```
+Then run the container with - 
+```
+docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  knowledgecomputing/mapkurator_recogito_2023 
+```
+Inside the container, run `conda activate mapKurator` to activate the mapkurator environment. 
+
+**NOTE**: 
+1) Remember to change `/PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE` and `/PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE` in the above command to two actual directory paths on your host machine. 
+2) The -v option in the command above gives your docker container access to the folders on host machine. More documentation can be found at this [link](https://docs.docker.com/storage/volumes/)
+
+Then refer to this "**Using mapKurator-Recogito docker image for standalone mapKurator**" [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1?id=using-mapkurator-recogito-docker-image-for-standalone-mapkurator). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter-v2 and spotter_testr. 
+
 
 ### Installing mapKurator on Ubuntu18.04 with cuda_11.3_devel
 #### Setup Anaconda 
@@ -86,22 +107,3 @@ Figure shows an outline of tables on Postgres and indices on Elasticsearch. The 
    Then, refer the following Logstash configuration file to create `osm-voca`: [m4_post_ocr/logstash_postocr.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m4_post_ocr/logstash_postocr.conf)
 3. Create `osm-linker` index on Elasticsearch which is used for EntityLinker module: Please run or modify [m6_entity_linker/create_elasticsearch_index.py](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/create_elasticsearch_index.py) and you will find the generated csv file named `osm_linker.csv`.
    Then, refer the following Logstash configuration file to create `osm-linker`: [m6_entity_linker/logstash_osm_linker.conf](https://github.com/knowledge-computing/mapkurator-system/blob/main/m6_entity_linker/logstash_osm_linker.conf)
-
-
-### Using mapKurator-Recogito docker image for standalone mapKurator 
-NOTE: This section tested upto stitch module.       
-
-If you face issues with the cuda installation, please consider using our docker image which is built on [nvidia/cuda:11.3.0-devel-ubuntu18.04](https://hub.docker.com/layers/nvidia/cuda/11.3.0-devel-ubuntu18.04/images/sha256-79ba930c17842750cd646dd9e78911199f48b7ea1f7ec378dbf90fdea1d95ba1?context=explore). 
-
-To try it out, first pull the docker image with the following command - ```docker pull knowledgecomputing/mapkurator_recogito_2023:latest```
-Then run the container with - 
-```
-docker run -it --name YOUR_CONTAINER_NAME --gpus all -v /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/input/ -v /PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE:/home/mapkurator-test-images/output/  knowledgecomputing/mapkurator_recogito_2023 
-```
-Inside the container, run `conda activate mapKurator` to activate the mapkurator environment. 
-
-**NOTE**: 
-1) Remember to change `/PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE` and `/PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE` in the above command to two actual directory paths on your host machine. 
-2) The -v option in the command above gives your docker container access to the folders on host machine. More documentation can be found at this [link](https://docs.docker.com/storage/volumes/)
-
-Then refer to this "**Using mapKurator-Recogito docker image for standalone mapKurator**" [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1?id=using-mapkurator-recogito-docker-image-for-standalone-mapkurator). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter-v2 and spotter_testr. 
