@@ -20,7 +20,7 @@ Inside the container, run `conda activate mapKurator` to activate the mapkurator
 1) Remember to change `/PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE` and `/PATH/TO/OUTPUT/FOLDER/ON/HOST_MACHINE` in the above command to two actual directory paths on your host machine. 
 2) The -v option in the command above gives your docker container access to the folders on host machine. More documentation can be found at this [link](https://docs.docker.com/storage/volumes/)
 
-Then refer to this "**Using mapKurator-Recogito docker image for standalone mapKurator**" [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1?id=using-mapkurator-recogito-docker-image-for-standalone-mapkurator). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter-v2 and spotter_testr. 
+Then refer to this "**How to Use**" guide [link](https://knowledge-computing.github.io/mapkurator-doc/#/docs/how-to-use-1). Ensure that you place any test images in the /PATH/TO/INPUT/FOLDER/ON/HOST_MACHINE mentioned above. The docker image comes with two spotting modules which can be found in the /home directory. These are spotter-v2 and spotter_testr. 
 
 
 ### Option 2: Installing mapKurator on Ubuntu18.04 with cuda_11.3_devel
