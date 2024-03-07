@@ -13,7 +13,6 @@
 
 
 - Use  mapKurator
-- 
   - [Installation](docs/install1.md)
   - [How to Use](docs/how-to-use-1.md)
   
