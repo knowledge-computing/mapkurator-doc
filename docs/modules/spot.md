@@ -46,7 +46,7 @@ python run.py --module_text_spotting
 where
 
 * `--module_text_spotting` turns on the spotting module in this run
-* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://drive.google.com/drive/folders/1Nby1JaIzNSwrGtGFn5Af0VL5y3TGLZGQ). 
+* `--sample_map_csv_path` stores the metadata of the input map, a sample file can be found [here](https://searchworks.stanford.edu/view/ss311gz1992).
 * `--text_spotting_model_dir` switches to the model directory
 * `--expt_name` is the experiment name for running the pipeline
 * `--spotter_model` is the spotter model name, choices=["testr", "spotter-v2"]
