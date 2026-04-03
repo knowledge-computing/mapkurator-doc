@@ -80,7 +80,7 @@
     </td>
     <td align="center">
       <img width="150" height="150"
-      src="https://knowledge-computing.github.io/images/people/jinakim.jpeg">
+      src="_media/jina_kim.jpeg">
       <br />
       <a href="https://jina-kim.github.io/">Jina Kim</a>
     </td>
@@ -88,7 +88,7 @@
 <tr>
     <td align="center">
       <img width="150" height="150"
-      src="https://knowledge-computing.github.io/images/people/leeje.jpeg">
+      src="_media/leeje_jang.jpeg">
       <br />
       <a href="https://leejejang.github.io/">Leeje Jang</a>
     </td>
